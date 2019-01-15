@@ -1,0 +1,21 @@
+//footer
+.footer-v1 {
+  padding: 2rem 0 1rem 0rem;;
+  background: $footer-bg;
+  color: $footer-color;
+
+  border-top: 5px solid #293199;
+
+  * {
+    color: $footer-color;
+  }
+
+  hr {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 1rem 0;
+  }
+
+  .mat-list-base {
+    padding-top: 2px;
+  }
+}
