@@ -1,7 +1,49 @@
 <div class="container page">
 
-    <p>
-        agency-profile works!
-    </p>
+    <app-agency-header>
+
+
+    </app-agency-header>
+
+    <div fxLayout="row" fxLayoutGap="25px">
+
+        <div class="details mt-5" fxFlex="75">
+
+            <mat-card>
+                <mat-card-content>
+                    <mat-tab-group color="primary">
+
+                        <mat-tab>
+                            <ng-template mat-tab-label>
+                                <mat-icon class="mr-3" color="primary">layers</mat-icon>
+                                Products
+                            </ng-template>
+
+                            <app-agency-products class="mt-3 display-block"></app-agency-products>
+                        </mat-tab>
+
+                        <mat-tab>
+                            <ng-template mat-tab-label>
+                                <mat-icon class="mr-3" color="primary">local_offer</mat-icon>
+                                Offers & Bundles
+                            </ng-template>
+
+                            <app-agency-offers class="mt-3 display-block"></app-agency-offers>
+                        </mat-tab>
+                    </mat-tab-group>
+
+                </mat-card-content>
+            </mat-card>
+
+
+        </div>
+
+        <div class="sidebar mt-5" fxFlex="25">
+
+            <app-agency-contact-info></app-agency-contact-info>
+            <app-agency-map class="mt-4 display-block"></app-agency-map>
+        </div>
+    </div>
+
 
 </div>

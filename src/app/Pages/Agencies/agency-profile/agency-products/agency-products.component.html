@@ -1,0 +1,24 @@
+<div fxLayout="row wrap" class="col-gap">
+
+    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" class="m-0">
+
+        <div fxLayout="row wrap" class="col-gap">
+
+            <div *ngFor="let product of products" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="33" fxFlex.lg="33"
+                 fxFlex.xl="33">
+                <div class="main-bg-inner overlay-section-item overlay-section-overlay relative"
+                     [ngStyle]="{'background-image': 'url(' + product.image + ')'}">
+                    <div class="end-left">
+                        <div class="overlay-section-content">
+                            <h4 class="mb-0 font-bold">{{product.title}}</h4>
+                            <h4 class=" text-xxl font-normal mb-3">{{product.subTitle}}</h4>
+                            <button mat-raised-button color="accent" class="mt-2" [routerLink]="product.link">GET
+                                QUOTE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

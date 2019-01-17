@@ -1,0 +1,88 @@
+<mat-card>
+
+    <mat-card-content>
+
+
+        <div fxLayout="row" fxLayoutGap="25px">
+
+            <div class="left" fxFlex="65" fxLayout="row">
+
+
+                <div fxFlex="20">
+
+                    <img class="logo"
+                         src="https://cdn.shopifycloud.com/hatchful-web/assets/2adcef6c1f7ab8a256ebdeba7fceb19f.png">
+
+                </div>
+
+
+                <div class="details" fxFlex="80">
+
+                    <h2 class="name">Sunny and Modern Apartment</h2>
+
+                    <div class="description">
+                        Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus.
+                        Mauris ac
+                        maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum
+                        elementum, est elit finibus tellus, ut tristique elit risus at metus.
+                    </div>
+
+                    <div class="actions">
+                        <button mat-raised-button color="primary"> Get a Quote</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="right" fxFlex="35">
+
+
+                <mat-list class="info">
+
+                    <mat-list-item>
+                        <span class="label">Rating:</span>
+                        <span class="value">
+                              <bar-rating [rate]="4" [max]="5" [readOnly]="true"></bar-rating>
+                        </span>
+                    </mat-list-item>
+
+
+                    <mat-list-item>
+                        <span class="label">Location : </span>
+                        <span class="value">
+                            2726 Shinn Street, New York
+                        </span>
+                    </mat-list-item>
+
+
+                    <mat-list-item>
+                        <span class="label">Member Since : </span>
+                        <span class="value">some date</span>
+                    </mat-list-item>
+
+
+                    <mat-list-item>
+                        <span class="label">Available Offers : </span>
+                        <span class="value">
+
+                            <mat-chip-list>
+                                <mat-chip color="primary">Papadum</mat-chip>
+                                <mat-chip>Naan</mat-chip>
+                            </mat-chip-list>
+                        </span>
+                    </mat-list-item>
+
+
+                </mat-list>
+
+
+            </div>
+
+
+        </div>
+
+
+    </mat-card-content>
+</mat-card>

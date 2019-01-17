@@ -5,9 +5,25 @@ import { AgenciesRoutes } from './agencies.routing';
 import { AgencyItemComponent } from './agency-item/agency-item.component';
 import { AgencySeachComponent } from './agency-seach/agency-seach.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
+import {
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule, MatTableModule, MatTabsModule
+} from '@angular/material';
 import { AgencyProfileComponent } from './agency-profile/agency-profile.component';
 import { AgencyListComponent } from './agency-list/agency-list.component';
+import { AgencyContactInfoComponent } from './agency-profile/agency-contact-info/agency-contact-info.component';
+import { AgencyOffersComponent } from './agency-profile/agency-offers/agency-offers.component';
+import { AgencyProductsComponent } from './agency-profile/agency-products/agency-products.component';
+import { AgencyMapComponent } from './agency-profile/agency-map/agency-map.component';
+import { AgencyHeaderComponent } from './agency-profile/agency-header/agency-header.component';
+import { BarRatingModule } from 'ngx-bar-rating';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
     declarations: [
@@ -15,6 +31,11 @@ import { AgencyListComponent } from './agency-list/agency-list.component';
         AgencySeachComponent,
         AgencyProfileComponent,
         AgencyListComponent,
+        AgencyContactInfoComponent,
+        AgencyMapComponent,
+        AgencyOffersComponent,
+        AgencyProductsComponent,
+        AgencyHeaderComponent,
     ],
     imports: [
         CommonModule,
@@ -24,6 +45,14 @@ import { AgencyListComponent } from './agency-list/agency-list.component';
         MatCardModule,
         MatButtonModule,
         MatIconModule,
+        MatListModule,
+        MatChipsModule,
+        BarRatingModule,
+        MatDividerModule,
+        MatTabsModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyDuImLr5degIcn4T3396tBpZgfEfsASfeA'
+        }),
         RouterModule.forChild(AgenciesRoutes),
     ]
 })

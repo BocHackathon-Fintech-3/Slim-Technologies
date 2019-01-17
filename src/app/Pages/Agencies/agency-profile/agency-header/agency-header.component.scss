@@ -1,0 +1,65 @@
+@import "../../../../../assets/scss/material-theme";
+
+mat-card {
+  padding: 26px 16px;
+  border-top: 5px solid $accent;
+}
+
+.left {
+
+
+  .logo {
+    width: 220px;
+  }
+
+  .details {
+
+    .name {
+
+    }
+
+    .description {
+      margin-top: 10px;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+
+  }
+
+}
+
+.right {
+  border-left: 1px solid #f0eeee;
+  padding-left: 10px;
+
+  .info {
+
+    .mat-list-base .mat-list-item .mat-list-item-content {
+      padding: 0px;
+    }
+
+    .label {
+
+      display: inline-block;
+      width: 70%;
+      font-weight: 500;
+    }
+
+    .value {
+
+      text-align: left;
+      width: 100%;
+      color: #5d5c5c;
+      display: inline-block;
+
+    }
+
+    bar-rating {
+      position: relative;
+      top: -6px;
+    }
+  }
+
+}
