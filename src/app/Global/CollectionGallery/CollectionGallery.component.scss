@@ -1,0 +1,15 @@
+.overlay-section-content {
+  margin: 0 auto;
+  height: 100%;
+
+  h4 {
+    text-align: center;
+    font-size: 31px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+}

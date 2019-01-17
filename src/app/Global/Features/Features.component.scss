@@ -10,15 +10,31 @@
   }
 }
 @media(max-width:960px){
-   .feature-list{
-      border-bottom: 1px solid #eee;
-     .feature-inner{
+  .feature-list{
+    border-bottom: 1px solid #eee;
+    .feature-inner{
       >div{
-         display:block !important;
-         margin: 0 auto;
-         text-align:center;
+        display:block !important;
+        margin: 0 auto;
+        text-align:center;
       }
-     }
-   
-   }
+    }
+
+  }
+}
+
+.std-padding{
+  padding: 3rem !important;
+}
+.std-size{
+  font-size:30px !important;
+}
+.std-size{
+  height: 100px;
+  width: 100px;
+}
+
+.std-font{
+  //font-family: Raleway;
+  font-weight: 800;
 }
