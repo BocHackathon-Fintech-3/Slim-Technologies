@@ -25,8 +25,11 @@ export const AppRoutes: Routes = [
                 path: 'agencies',
                 loadChildren: './Pages/Agencies/agencies.module#AgenciesModule'
             },
-
-
+            {
+                path: 'quotes',
+                loadChildren: './Pages/Quotes/quotes.module#QuotesModule'
+            },
+            
             {
                 path: 'home-three',
                 component: HomeThreeComponent

@@ -14,16 +14,16 @@
                     <div *ngFor="let item of items" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="33" fxFlex.lg="33"
                          fxFlex.xl="33">
 
-                        <div class="main-bg-inner overlay-section-item overlay-section-overlay relative"
-                             [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
-                            <div class="end-left">
-                                <div class="overlay-section-content">
-                                    <h4 class="mb-0 font-bold" [innerHTML]="item.title"></h4>
+                        <a [routerLink]="[item.link]">
+                            <div class="main-bg-inner overlay-section-item overlay-section-overlay relative"
+                                 [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+                                <div class="end-left">
+                                    <div class="overlay-section-content">
+                                        <h4 class="mb-0 font-bold" [innerHTML]="item.title"></h4>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-
+                        </a>
                     </div>
                 </div>
             </div>

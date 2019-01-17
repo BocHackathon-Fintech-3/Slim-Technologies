@@ -1,33 +1,34 @@
-import { BrowserModule} from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, 
-         MatCardModule, 
-         MatMenuModule, 
-         MatToolbarModule, 
-         MatIconModule, 
-         MatInputModule, 
-         MatDatepickerModule, 
-         MatNativeDateModule, 
-         MatProgressSpinnerModule,
-         MatTableModule, 
-         MatExpansionModule, 
-         MatSelectModule,
-         MatSnackBarModule, 
-         MatTooltipModule, 
-         MatChipsModule, 
-         MatListModule, 
-         MatSidenavModule, 
-         MatTabsModule, 
-         MatProgressBarModule,
-         MatCheckboxModule,
-         MatSliderModule,
-         MatRadioModule,
-         MatDialogModule,
-         MatGridListModule
+import {
+    MatButtonModule,
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatChipsModule,
+    MatListModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatGridListModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
@@ -70,82 +71,82 @@ import { FixedHeaderComponent } from './Layouts/Header/FixedHeader/FixedHeader.c
 
 /********** Custom option for ngx-translate ******/
 export function createTranslateLoader(http: HttpClient) {
-   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    HomeoneComponent,
-    HeaderOneComponent,
-    FooterOneComponent,
-    MenuComponent,
-    SideBarMenuComponent,
-    CartComponent,
-    NotFoundComponent,
-    PaymentDetailSideBarComponent,
-    HomeTwoComponent,
-    HeaderTwoComponent,
-    FooterTwoComponent,
-    HomeThreeComponent,
-    HeaderThreeComponent,
-    FixedHeaderComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'embryo-seo-pre'}),
-    BrowserAnimationsModule,
-    RouterModule.forRoot(AppRoutes, {onSameUrlNavigation: 'reload'}),
-    GlobalModule,
-    TemplatesModule,
-    MatButtonModule, 
-    FlexLayoutModule,
-    MatCardModule, 
-    MatMenuModule, 
-    MatToolbarModule, 
-    MatIconModule, 
-    MatInputModule, 
-    MatDatepickerModule, 
-    MatNativeDateModule, 
-    MatProgressSpinnerModule,
-    MatTableModule, 
-    MatExpansionModule, 
-    MatSelectModule, 
-    MatSnackBarModule, 
-    MatTooltipModule, 
-    MatChipsModule, 
-    MatListModule, 
-    MatSidenavModule, 
-    MatTabsModule, 
-    MatProgressBarModule,
-    MatCheckboxModule,
-    MatSliderModule,
-    MatRadioModule,
-    MatDialogModule,
-    MatGridListModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    LoadingBarRouterModule,
-    LoadingBarModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase, 'embryo'),
-    AngularFirestoreModule,
-    AngularFireDatabaseModule,
-    ToastaModule.forRoot(),
-    BidiModule,
-    TranslateModule.forRoot({
-       loader: {
-          provide: TranslateLoader,
-          useFactory: createTranslateLoader,
-          deps: [HttpClient]
-       }
-    }),
-    SlickCarouselModule
-  ],
-   providers: [
-      MenuItems,
-      EmbryoService
-   ],
-   bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainComponent,
+        HomeoneComponent,
+        HeaderOneComponent,
+        FooterOneComponent,
+        MenuComponent,
+        SideBarMenuComponent,
+        CartComponent,
+        NotFoundComponent,
+        PaymentDetailSideBarComponent,
+        HomeTwoComponent,
+        HeaderTwoComponent,
+        FooterTwoComponent,
+        HomeThreeComponent,
+        HeaderThreeComponent,
+        FixedHeaderComponent
+    ],
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'embryo-seo-pre' }),
+        BrowserAnimationsModule,
+        RouterModule.forRoot(AppRoutes, {  enableTracing: true }),
+        GlobalModule,
+        TemplatesModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        MatCardModule,
+        MatMenuModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatExpansionModule,
+        MatSelectModule,
+        MatSnackBarModule,
+        MatTooltipModule,
+        MatChipsModule,
+        MatListModule,
+        MatSidenavModule,
+        MatTabsModule,
+        MatProgressBarModule,
+        MatCheckboxModule,
+        MatSliderModule,
+        MatRadioModule,
+        MatDialogModule,
+        MatGridListModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        LoadingBarRouterModule,
+        AngularFireModule.initializeApp(environment.firebase, 'embryo'),
+        AngularFirestoreModule,
+        AngularFireDatabaseModule,
+        ToastaModule.forRoot(),
+        BidiModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        SlickCarouselModule
+    ],
+    providers: [
+        MenuItems,
+        EmbryoService
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
