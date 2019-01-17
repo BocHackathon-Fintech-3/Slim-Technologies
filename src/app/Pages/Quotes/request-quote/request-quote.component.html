@@ -1,0 +1,57 @@
+<div class="container page">
+
+    <div fxLayout="row " fxLayoutGap="25px">
+
+        <div class="sidebar mat-background-warn" fxFlex="20">
+            <app-insurance-category-menu></app-insurance-category-menu>
+        </div>
+
+
+        <div fxFlex="80" fxLayout.lt-sm="column">
+
+
+            <mat-card class="w-100 display-block">
+
+                <mat-card-content>
+
+                    <mat-horizontal-stepper labelPosition="bottom" [linear]="true" #stepper
+                                            class="w-100 display-block p-3">
+
+                        <mat-step>
+                            <div>
+                                <ng-template matStepLabel>Fill out the form</ng-template>
+
+
+                                <div class="mt-5">
+                                    <button mat-flat-button color="primary" matStepperNext>Next</button>
+                                </div>
+                            </div>
+                        </mat-step>
+                        <mat-step>
+                            <div>
+                                <ng-template matStepLabel>Choose over 40 insurance agencies</ng-template>
+
+
+                                <div class="mt-5">
+                                    <button mat-flat-button matStepperPrevious class="mr-2">Back</button>
+                                    <button mat-flat-button color="primary" matStepperNext>Next</button>
+                                </div>
+                            </div>
+                        </mat-step>
+                        <mat-step>
+                            <ng-template matStepLabel> Get the best deal.</ng-template>
+
+                            <div class="mt-5">
+                                <button mat-button matStepperPrevious class="mr-2">Back</button>
+                                <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
+                            </div>
+                        </mat-step>
+                    </mat-horizontal-stepper>
+
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+
+    </div>
+</div>
