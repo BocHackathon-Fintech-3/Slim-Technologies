@@ -24,6 +24,7 @@ import { AgencyMapComponent } from './agency-profile/agency-map/agency-map.compo
 import { AgencyHeaderComponent } from './agency-profile/agency-header/agency-header.component';
 import { BarRatingModule } from 'ngx-bar-rating';
 import { AgmCoreModule } from '@agm/core';
+import { GlobalModule } from '../../Global/Global.module';
 
 @NgModule({
     declarations: [
@@ -36,8 +37,10 @@ import { AgmCoreModule } from '@agm/core';
         AgencyOffersComponent,
         AgencyProductsComponent,
         AgencyHeaderComponent,
+
     ],
     imports: [
+        GlobalModule,
         CommonModule,
         FlexLayoutModule,
         MatFormFieldModule,
