@@ -1,3 +1,9 @@
-<p>
-  insurance-category-menu works!
-</p>
+<ul>
+    <li matRipple *ngFor="let item of items">
+
+        <img src="{{item.icon}}"/>
+        <h3>{{item.name}}</h3>
+
+    </li>
+</ul>
+

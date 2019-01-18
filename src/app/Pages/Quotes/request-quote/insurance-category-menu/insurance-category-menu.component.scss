@@ -1,0 +1,31 @@
+@import "../../../../../assets/scss/material-theme";
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    box-shadow: 1px 1px 5px 1px #f5f4f4;
+    border: 1px solid #e8e8e8;
+
+    img {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      margin-right: 18px;
+    }
+
+    h3 {
+      display: inline-block;
+      font-size: 21px;
+      color: $primary;
+      position: relative;
+      top: 3px;
+    }
+  }
+}

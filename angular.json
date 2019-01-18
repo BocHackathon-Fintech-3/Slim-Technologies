@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "src/assets/scss/style.scss",
               "node_modules/ngx-bar-rating/themes/br-default-theme.css",
               "node_modules/angular-instantsearch/bundles/instantsearch.min.css",
@@ -112,7 +112,7 @@
               "**/node_modules/**"
             ]
           }
-        }, 
+        },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {

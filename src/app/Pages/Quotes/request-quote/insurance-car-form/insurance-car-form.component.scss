@@ -1,0 +1,12 @@
+@import "../../../../../assets/scss/material-theme";
+
+
+:host {
+
+  /deep/ {
+    .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+      background: $accent;
+    }
+
+  }
+}

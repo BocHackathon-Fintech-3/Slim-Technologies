@@ -11,19 +11,21 @@ import {
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatListModule, MatStepperModule,
+    MatListModule, MatRippleModule, MatStepperModule,
     MatTabsModule
 } from '@angular/material';
 import { BarRatingModule } from 'ngx-bar-rating';
 import { RouterModule } from '@angular/router';
 import { QuotesRoutes } from './quotes.routing';
 import { InsuranceCategoryMenuComponent } from './request-quote/insurance-category-menu/insurance-category-menu.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormModule } from '../../Lib/forms/form.module';
+import { InsuranceCarFormComponent } from './request-quote/insurance-car-form/insurance-car-form.component';
 
 @NgModule({
     declarations: [
         RequestQuoteComponent,
-        InsuranceCategoryMenuComponent
+        InsuranceCategoryMenuComponent,
+        InsuranceCarFormComponent
 
     ],
     imports: [
@@ -39,9 +41,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatChipsModule,
         BarRatingModule,
         MatDividerModule,
+        MatRippleModule,
         MatStepperModule,
-        FormsModule,
-        ReactiveFormsModule,
+        FormModule,
         MatTabsModule,
         RouterModule.forChild(QuotesRoutes),
     ]
