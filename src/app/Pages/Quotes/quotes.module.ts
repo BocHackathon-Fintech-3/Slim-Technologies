@@ -5,7 +5,7 @@ import { GlobalModule } from '../../Global/Global.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
     MatButtonModule,
-    MatCardModule,
+    MatCardModule, MatCheckboxModule,
     MatChipsModule,
     MatDividerModule,
     MatFormFieldModule,
@@ -20,16 +20,24 @@ import { QuotesRoutes } from './quotes.routing';
 import { InsuranceCategoryMenuComponent } from './request-quote/insurance-category-menu/insurance-category-menu.component';
 import { FormModule } from '../../Lib/forms/form.module';
 import { InsuranceCarFormComponent } from './request-quote/insurance-car-form/insurance-car-form.component';
+import { AgencySelectComponent } from './request-quote/agency-select/agency-select.component';
+import { AgencyItemComponent } from './request-quote/agency-select/agency-item/agency-item.component';
+import { SessionModule } from '../Session/Session.module';
+import { QuoteThankYouComponent } from './request-quote/quote-thank-you/quote-thank-you.component';
 
 @NgModule({
     declarations: [
         RequestQuoteComponent,
         InsuranceCategoryMenuComponent,
-        InsuranceCarFormComponent
+        InsuranceCarFormComponent,
+        AgencySelectComponent,
+        AgencyItemComponent,
+        QuoteThankYouComponent
 
     ],
     imports: [
         GlobalModule,
+        SessionModule,
         CommonModule,
         FlexLayoutModule,
         MatFormFieldModule,
@@ -44,6 +52,7 @@ import { InsuranceCarFormComponent } from './request-quote/insurance-car-form/in
         MatRippleModule,
         MatStepperModule,
         FormModule,
+        MatCheckboxModule,
         MatTabsModule,
         RouterModule.forChild(QuotesRoutes),
     ]

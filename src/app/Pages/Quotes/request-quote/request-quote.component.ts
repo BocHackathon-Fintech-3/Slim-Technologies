@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { MatStepper } from '@angular/material';
 
 @Component({
     selector: 'app-request-quote',
@@ -7,11 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestQuoteComponent implements OnInit {
 
+    @ViewChild('stepper') stepper: MatStepper;
 
-    constructor() {
+    fillFormStepCompleted = true;
+    pickAgenciesStepCompleted = true;
+    finishStepCompleted = true;
+
+    constructor(private cdr: ChangeDetectorRef) {
     }
 
     ngOnInit() {
     }
 
+
+    stepCompleted(stepName: string) {
+
+
+        if (stepName === 'fillForm') {
+            this.fillFormStepCompleted = true;
+        } else if (stepName === 'pickAgencies') {
+            this.pickAgenciesStepCompleted = true;
+        }
+
+
+        this.cdr.detectChanges();
+
+        this.stepper.next();
+    }
 }

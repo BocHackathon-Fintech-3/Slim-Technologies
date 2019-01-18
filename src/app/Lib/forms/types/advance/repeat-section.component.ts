@@ -26,7 +26,3 @@ export class RepeatTypeComponent extends FieldArrayType {
     }
 }
 
-export interface StepType {
-    label: string;
-    fields: FormlyFieldConfig[];
-}

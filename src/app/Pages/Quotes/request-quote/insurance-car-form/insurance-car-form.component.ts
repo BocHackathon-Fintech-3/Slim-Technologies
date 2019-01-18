@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { BaseComponent } from '../../../../Lib/components/base-component.class';
-import { StepType } from '../../../../Lib/forms/types/advance/repeat-section.component';
-import { FormArray, FormGroup } from '@angular/forms';
-import { FormlyFormOptions } from '@ngx-formly/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
+import { MatStepper } from '@angular/material';
+
+export interface StepType {
+    label: string;
+    fields: FormlyFieldConfig[];
+    completed: boolean;
+}
+
 
 @Component({
     selector: 'app-insurance-car-form',
@@ -11,7 +18,10 @@ import { FormlyFormOptions } from '@ngx-formly/core';
 })
 export class InsuranceCarFormComponent extends BaseComponent {
 
-    constructor() {
+    @Output() completed = new EventEmitter<boolean>();
+    @ViewChild('stepper') stepper: MatStepper;
+
+    constructor(private cdr: ChangeDetectorRef) {
         super();
     }
 
@@ -22,6 +32,7 @@ export class InsuranceCarFormComponent extends BaseComponent {
 
         {
             label: 'Car owner personal information',
+            completed: false,
             fields: [
 
                 {
@@ -119,15 +130,63 @@ export class InsuranceCarFormComponent extends BaseComponent {
         },
         {
             label: 'Vehicle Information',
+            completed: false,
             fields: [
+
                 {
-                    key: 'country',
-                    type: 'input',
-                    templateOptions: {
-                        label: 'Country',
-                        required: true,
-                    },
-                },
+                    fieldGroupClassName: 'row',
+                    fieldGroup: [
+
+                        {
+                            key: 'vehicleValue',
+                            type: 'input',
+                            className: 'col-md-6',
+                            templateOptions: {
+                                label: 'Vehicle Value',
+                                required: true,
+                            },
+                        },
+                        {
+                            key: 'vehicleUse',
+                            type: 'select',
+                            className: 'col-md-6',
+                            templateOptions: {
+                                label: 'Vehicle Use',
+                                required: true,
+                                options: ['Private', 'Commercial'].map(item => {
+                                    return { 'value': item, 'label': item };
+                                })
+                            },
+                        },
+
+                        {
+                            key: 'registrationNumber',
+                            type: 'input',
+                            className: 'col-md-6',
+                            templateOptions: {
+                                type: 'text',
+                                label: 'Registration Number',
+                                required: true,
+                            }
+                        },
+
+                        {
+                            key: 'coverType',
+                            type: 'select',
+                            className: 'col-md-6',
+                            templateOptions: {
+                                label: 'Type Of Cover',
+                                required: true,
+                                options: ['Third Party Only', 'Third Party Fire & Theft', 'Comprehensive'].map(item => {
+                                    return { 'value': item, 'label': item };
+                                })
+                            },
+                        },
+
+                    ],
+                }
+
+
             ],
         },
     ];
@@ -140,11 +199,18 @@ export class InsuranceCarFormComponent extends BaseComponent {
     }
 
     nextStep(step) {
+
+        this.steps[this.activedStep].completed = true;
         this.activedStep = step + 1;
+        this.steps[this.activedStep].completed = true;
+
+        this.cdr.detectChanges();
+
+        this.stepper.next();
+
     }
 
     submit() {
-        alert(JSON.stringify(this.model));
+        this.completed.emit(true);
     }
-
 }

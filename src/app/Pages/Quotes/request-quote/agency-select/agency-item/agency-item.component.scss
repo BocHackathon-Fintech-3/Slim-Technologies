@@ -1,0 +1,32 @@
+@import "../../../../../../assets/scss/material-theme";
+
+:host {
+
+  margin-bottom: 20px;
+  cursor: pointer;
+
+
+  .inner {
+
+    border: 1px solid #d2d2d2;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px #f1f1f1;
+
+    &.selected {
+      border: 1px solid $primary;
+    }
+
+    mat-checkbox {
+      position: absolute;
+      right: 5px;
+    }
+
+    img {
+
+    }
+
+    .view-profile {
+      color: $accent
+    }
+  }
+}

@@ -7,30 +7,31 @@ import { GlobalModule } from '../../Global/Global.module';
 import { TemplatesModule } from '../../Templates/Templates.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule, 
-   MatCardModule, 
-   MatMenuModule, 
-   MatToolbarModule, 
-   MatIconModule, 
-   MatInputModule, 
-   MatDatepickerModule, 
-   MatNativeDateModule, 
-   MatProgressSpinnerModule,
-   MatTableModule, 
-   MatExpansionModule, 
-   MatSelectModule,
-   MatSnackBarModule, 
-   MatTooltipModule, 
-   MatChipsModule, 
-   MatListModule, 
-   MatSidenavModule, 
-   MatTabsModule, 
-   MatProgressBarModule,
-   MatCheckboxModule,
-   MatSliderModule,
-   MatRadioModule,
-   MatDialogModule,
-   MatGridListModule
+import {
+    MatButtonModule,
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatChipsModule,
+    MatListModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatGridListModule
 } from '@angular/material';
 
 import { RegisterComponent } from './Register/Register.component';
@@ -39,43 +40,47 @@ import { ForgotPasswordComponent } from './ForgotPassword/ForgotPassword.compone
 import { ThankYouComponent } from './ThankYou/ThankYou.component';
 
 @NgModule({
-   imports: [
-      CommonModule,
-      RouterModule.forChild(SessionRoutes),
-      FlexLayoutModule,
-      MatCardModule, 
-      MatButtonModule,
-      MatMenuModule, 
-      MatToolbarModule, 
-      MatIconModule, 
-      MatInputModule, 
-      MatDatepickerModule, 
-      MatNativeDateModule, 
-      MatProgressSpinnerModule,
-      MatTableModule, 
-      MatExpansionModule, 
-      MatSelectModule, 
-      MatSnackBarModule, 
-      MatTooltipModule, 
-      MatChipsModule, 
-      MatListModule, 
-      MatSidenavModule, 
-      MatTabsModule, 
-      MatProgressBarModule,
-      MatCheckboxModule,
-      MatSliderModule,
-      MatRadioModule,
-      MatDialogModule,
-      MatGridListModule,
-      GlobalModule,
-      TemplatesModule,
-      NgAisModule
-   ],
-   declarations: [
-      RegisterComponent,
-      SignInComponent,
-      ThankYouComponent,
-      ForgotPasswordComponent
-   ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(SessionRoutes),
+        FlexLayoutModule,
+        MatCardModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatExpansionModule,
+        MatSelectModule,
+        MatSnackBarModule,
+        MatTooltipModule,
+        MatChipsModule,
+        MatListModule,
+        MatSidenavModule,
+        MatTabsModule,
+        MatProgressBarModule,
+        MatCheckboxModule,
+        MatSliderModule,
+        MatRadioModule,
+        MatDialogModule,
+        MatGridListModule,
+        GlobalModule,
+        TemplatesModule,
+        NgAisModule
+    ],
+    declarations: [
+        RegisterComponent,
+        SignInComponent,
+        ThankYouComponent,
+        ForgotPasswordComponent
+    ],
+    exports: [
+        ThankYouComponent
+    ]
 })
-export class SessionModule { }
+export class SessionModule {
+}

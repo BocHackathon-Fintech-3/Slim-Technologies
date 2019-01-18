@@ -1,8 +1,8 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
 
-    <mat-vertical-stepper [linear]="false" #stepper>
+    <mat-vertical-stepper [linear]="true" #stepper>
 
-        <mat-step *ngFor="let step of steps; let index = index; let last = last;">
+        <mat-step *ngFor="let step of steps; let index = index; let last = last;" [completed]="step.completed">
             <ng-template matStepLabel>{{ step.label }}</ng-template>
             <formly-form
                     [form]="form.at(index)"
@@ -12,18 +12,16 @@
             </formly-form>
 
             <div>
-                <button *ngIf="index !== 0" matStepperPrevious class="btn btn-primary" type="button"
+                <button mat-flat-button *ngIf="index !== 0" matStepperPrevious class="btn btn-primary" type="button"
                         (click)="prevStep(index)">Back
                 </button>
-                <button mat-flat-button *ngIf="!last" matStepperNext class="btn btn-primary" type="button"
+                <button  mat-flat-button color="accent" *ngIf="!last" class="btn btn-primary" type="button"
                         [disabled]="!form.at(index).valid" (click)="nextStep(index)">Next
                 </button>
-                <button *ngIf="last" class="btn btn-primary" [disabled]="!form.valid" type="submit">Submit</button>
+                <button *ngIf="last" mat-flat-button color="primary" class="btn btn-primary" [disabled]="!form.valid"
+                        type="submit">Submit
+                </button>
             </div>
         </mat-step>
     </mat-vertical-stepper>
-</form>
-
-<form id="customer-form" [formGroup]="form" (submit)="submit()" novalidate>
-    <formly-form [fields]="formFields" [form]="form"></formly-form>
 </form>
