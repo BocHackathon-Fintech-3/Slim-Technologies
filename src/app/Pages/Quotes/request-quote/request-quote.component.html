@@ -13,7 +13,7 @@
 
                 <mat-card-content>
 
-                    <mat-horizontal-stepper [selectedIndex]="1" labelPosition="bottom" [linear]="true" #stepper
+                    <mat-horizontal-stepper [selectedIndex]="0" labelPosition="bottom" [linear]="true" #stepper
                                             class="w-100 display-block p-3">
 
                         <mat-step [completed]="fillFormStepCompleted" [editable]="false">
@@ -23,9 +23,6 @@
                                 <app-insurance-car-form
                                         (completed)="stepCompleted('fillForm')"></app-insurance-car-form>
 
-                                <div class="mt-5">
-                                    <button mat-flat-button color="primary" matStepperNext>Next</button>
-                                </div>
                             </div>
                         </mat-step>
 
@@ -37,7 +34,7 @@
 
                                 <div class="mt-5">
                                     <button mat-flat-button matStepperPrevious class="mr-2">Back</button>
-                                    <button mat-flat-button color="primary" matStepperNext>Next</button>
+                                    <button mat-flat-button color="primary" matStepperNext>Submit Request</button>
                                 </div>
                             </div>
                         </mat-step>
