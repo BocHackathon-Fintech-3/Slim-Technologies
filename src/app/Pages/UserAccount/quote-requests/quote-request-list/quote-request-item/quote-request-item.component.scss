@@ -9,12 +9,15 @@
   border-radius: 4px;
 
 
-  .logo {
-    margin-top: 5px;
-    height: 25px;
+  .fa {
+
+    font-size: 30px;
+    color: $accent;
+    position: relative;
+    top: -4px;
   }
 
-  .label{
+  .label {
     font-weight: 500;
   }
 

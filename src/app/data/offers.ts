@@ -5,12 +5,12 @@ export const OFFERS = [
         name: 'GAP Insurance',
         product: 'Car Insurance',
         price: '40',
-        benefit: 12,
-        premium: 11,
-        security: 17,
-        easeOfuse: 4,
-        customerSatisfaction: 10,
-        total: 54,
+        benefit: 81,
+        premium: 90,
+        security: 61,
+        easeOfuse: 99,
+        customerSatisfaction: 100,
+        total: 98,
         status: 'quoted'
 
     },

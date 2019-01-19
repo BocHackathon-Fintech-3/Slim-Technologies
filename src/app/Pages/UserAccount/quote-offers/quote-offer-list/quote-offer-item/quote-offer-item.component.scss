@@ -1,20 +1,80 @@
 @import "../../../../../../assets/scss/material-theme";
 
-.item {
+
+.score-item{
+  .c100.yellow .bar,
+  .c100.yellow .fill {
+    border-color:$accent !important;
+  }
+
+  .c100.yellow:hover > span {
+    color: $accent;
+  }
+
+  .c100.green .bar,
+  .c100.green .fill {
+    border-color: $primary !important;
+  }
+
+  .c100.green:hover > span {
+    color: $primary;
+  }
+
+
+  .c100.red .bar,
+  .c100.red .fill {
+    border-color: $warn !important;
+  }
+
+  .c100.red:hover > span {
+    color: $warn;
+  }
 
 
   .c100 > span {
     color: #655e5e;
   }
+}
 
-  &.full {
-    border-left: 4px solid $primary;
+
+.item {
+
+
+  cursor: pointer;
+
+  &.red {
+    border-left: 4px solid $warn;
+
 
     .score {
 
-      //.bar,.fill {
-      //  border: 0.08em solid $primary;
-      //}
+      .title {
+        .percentage {
+          color:  $warn;
+        }
+      }
+    }
+  }
+
+  &.yellow {
+    border-left: 4px solid $accent;
+
+
+    .score {
+
+      .title {
+        .percentage {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &.green {
+    border-left: 4px solid $primary;
+
+
+    .score {
 
       .title {
         .percentage {
@@ -96,10 +156,6 @@
     border-top: 1px solid #dadcda;
 
 
-    .title {
-      padding: 10px 6px;
-    }
-
     .score {
       background: #f5f5f5;
       padding: 20px;
@@ -131,6 +187,7 @@
 
     .key-benefits {
 
+
       ul {
         list-style: none;
         padding: 0px;
@@ -155,8 +212,16 @@
 
     .details-footer {
 
+      .label {
+        font-size: 20px;
+        color: $accent;
+      }
+
       .price {
-        font-size: 4em;
+
+
+        font-size: 3.4em;
+        color: #595959;
       }
     }
   }

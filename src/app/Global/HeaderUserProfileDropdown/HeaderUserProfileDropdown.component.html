@@ -2,13 +2,27 @@
     <img src="assets/images/log-in-user.jpg" width="250" height="250" alt="log-in-user">
 </button>
 <mat-menu #loginuser="matMenu">
+
+
+    <button mat-menu-item color="primary" fxLayoutAlign="start center" [routerLink]="['/account/profile']"><i
+            class="material-icons mr-1">security</i> <span> My Insurance Plans</span>
+    </button>
+
+
+    <button mat-menu-item color="primary" fxLayoutAlign="start center" [routerLink]="['/','account','quote-requests']"><i
+            class="material-icons mr-1">local_offer</i> <span>  Quote Requests</span>
+    </button>
+
+
+
     <button mat-menu-item color="primary" fxLayoutAlign="start center" [routerLink]="['/account/profile']"><i
             class="material-icons mr-1">account_circle</i> <span>Profile</span>
     </button>
-    <button mat-menu-item color="primary" [routerLink]="['/account/profile']"><i
-            class="material-icons mr-1">settings</i><span>Account</span></button>
+
     <button mat-menu-item color="primary" [routerLink]="['/account/profile']"><i class="material-icons mr-1">local_post_office</i>
         <span>Messages</span></button>
+
     <button mat-menu-item color="primary" [routerLink]="['/session/signin']"><i class="material-icons mr-1">power_settings_new</i><span>Logout</span>
+
     </button>
 </mat-menu>

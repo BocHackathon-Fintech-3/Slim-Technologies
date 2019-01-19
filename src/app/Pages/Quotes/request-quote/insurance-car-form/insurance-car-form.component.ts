@@ -131,7 +131,7 @@ export class InsuranceCarFormComponent extends BaseComponent {
             ],
         },
         {
-            label: 'Vehicle Information',
+            label: 'Car Information',
             completed: true,
             fields: [
 

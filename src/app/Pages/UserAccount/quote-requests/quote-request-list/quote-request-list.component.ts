@@ -11,19 +11,19 @@ export class QuoteRequestListComponent implements OnInit {
     items = [
         {
             type: 'Car Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'car',
             offers: '12',
             date: new Date()
         },
         {
-            type: 'Medical Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/medical-color.svg',
+            type: 'Property Insurance',
+            icon: 'home',
             offers: '9',
             date: new Date()
         },
         {
             type: 'Travel Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/travel-color.svg',
+            icon: 'plane',
             offers: '6',
             date: new Date()
         },

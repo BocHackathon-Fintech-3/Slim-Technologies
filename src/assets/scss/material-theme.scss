@@ -9,6 +9,7 @@
 // Define the default theme (same as the example above).
 $my-theme-primary: mat-palette($mat-green,800);
 $my-theme-accent:  mat-palette($mat-yellow, 800);
+$my-theme-warn:  mat-palette($mat-red, 600);
 $my-light-theme:   mat-light-theme($my-theme-primary, $my-theme-accent);
 
 // Include the default theme styles.
@@ -35,6 +36,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 // Create your Sass color vars (will be available in all the project)
 $primary: mat-color($my-theme-primary);
 $accent: mat-color($my-theme-accent);
+$warn: mat-color($my-theme-warn);
 
 .primary-color{
   color: $primary;

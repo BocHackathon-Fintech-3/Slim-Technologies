@@ -32,10 +32,10 @@ export class QuoteOfferItemComponent implements OnInit {
     showDetails = false;
 
 
-    get color() {
-        if (this.offer.total > 80) {
+    getColor(value: number): string {
+        if (value >= 80) {
             return 'green';
-        } else if (this.offer.total > 60) {
+        } else if (value >= 60) {
             return 'yellow';
         } else {
             return 'red';

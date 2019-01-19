@@ -12,31 +12,31 @@ export class InsuranceCategoryMenuComponent implements OnInit {
 
         {
             name: 'Car Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'car',
             link: 'sdfdsf'
 
         },
         {
             name: 'Travel Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'plane',
             link: 'sdfdsf'
 
         },
         {
             name: 'Property Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'home',
             link: 'sdfdsf'
 
         },
         {
             name: 'Employee Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'user',
             link: 'sdfdsf'
 
         },
         {
             name: 'Office Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            icon: 'briefcase',
             link: 'sdfdsf'
         }
     ];
