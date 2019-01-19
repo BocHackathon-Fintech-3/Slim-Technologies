@@ -1,0 +1,34 @@
+<div class="row item no-gutters">
+
+    <div class="col-6 align-center">
+
+        <div class="row no-gutters">
+
+            <div class="col-3 text-center">
+                <img class="logo" src="{{request.icon}}" alt="">
+            </div>
+
+            <div class="col-9">
+                <h4>{{request.type}}</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-2 align-center">
+        <div class="label"> Date</div>
+        <span class="text-muted date value">{{request.date | amDateFormat:'LL'}}</span>
+    </div>
+
+
+    <div class="col-4 text-right align-center">
+        <button mat-raised-button color="primary"
+                [routerLink]="['/','account','offers']" class="mr-3"
+                [matBadge]="request.offers" matBadgeColor="accent" matBadgeOverlap="false"
+                matBadgeOverlap="true">View Offers
+        </button>
+    </div>
+
+</div>

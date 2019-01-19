@@ -10,42 +10,55 @@
 
             <mat-card class="w-100 display-block">
 
+                <mat-card-header>
+
+                    <mat-icon color="primary" matCardAvatar>assignment</mat-icon>
+
+                    <mat-card-title>
+                        <h4>Get an insurance with a with minimum hassle.</h4>
+                    </mat-card-title>
+                </mat-card-header>
+
+
                 <mat-card-content>
 
-                    <mat-horizontal-stepper [selectedIndex]="0" labelPosition="bottom" [linear]="true" #stepper
-                                            class="w-100 display-block p-3">
+                    <!--<mat-horizontal-stepper [selectedIndex]="0" labelPosition="bottom" [linear]="true" #stepper-->
+                    <!--class="w-100 display-block p-3">-->
 
-                        <mat-step [completed]="fillFormStepCompleted" [editable]="false">
-                            <div>
-                                <ng-template matStepLabel>Fill out the form</ng-template>
+                    <!--<mat-step [completed]="fillFormStepCompleted" [editable]="false">-->
+                    <!--<div>-->
+                    <!--<ng-template matStepLabel>Fill out the form</ng-template>-->
 
-                                <app-insurance-car-form
-                                        (completed)="stepCompleted('fillForm')"></app-insurance-car-form>
+                    <!---->
 
-                            </div>
-                        </mat-step>
+                    <!--</div>-->
+                    <!--</mat-step>-->
 
-                        <mat-step [completed]="pickAgenciesStepCompleted" [editable]="false">
-                            <div>
-                                <ng-template matStepLabel>Choose over 40 insurance agencies</ng-template>
+                    <!--<mat-step [completed]="pickAgenciesStepCompleted" [editable]="false">-->
+                    <!--<div>-->
+                    <!--<ng-template matStepLabel>Choose over 40 insurance agencies</ng-template>-->
 
-                                <app-agency-select></app-agency-select>
+                    <!--<app-agency-select></app-agency-select>-->
 
-                                <div class="mt-5">
-                                    <button mat-flat-button matStepperPrevious class="mr-2">Back</button>
-                                    <button mat-flat-button color="primary" (click)="stepCompleted('pickAgencies')" [libSpinBtn]="saving">Submit
-                                        Request
-                                    </button>
-                                </div>
-                            </div>
-                        </mat-step>
-                        <mat-step [editable]="false">
-                            <ng-template matStepLabel> Get the best deal.</ng-template>
+                    <!--<div class="mt-5">-->
+                    <!--<button mat-flat-button matStepperPrevious class="mr-2">Back</button>-->
+                    <!--<button mat-flat-button color="primary" (click)="stepCompleted('pickAgencies')" [libSpinBtn]="saving">Submit-->
+                    <!--Request-->
+                    <!--</button>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</mat-step>-->
+                    <!--<mat-step [editable]="false">-->
+                    <!--<ng-template matStepLabel> Get the best deal.</ng-template>-->
 
-                            <app-quote-thank-you></app-quote-thank-you>
+                    <!--<app-quote-thank-you></app-quote-thank-you>-->
 
-                        </mat-step>
-                    </mat-horizontal-stepper>
+                    <!--</mat-step>-->
+                    <!--</mat-horizontal-stepper>-->
+
+
+                    <app-insurance-car-form
+                            (completed)="stepCompleted('fillForm')"></app-insurance-car-form>
 
                 </mat-card-content>
             </mat-card>

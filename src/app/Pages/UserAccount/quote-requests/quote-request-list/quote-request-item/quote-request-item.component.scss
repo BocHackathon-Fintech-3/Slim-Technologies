@@ -1,0 +1,22 @@
+@import "../../../../../../assets/scss/material-theme";
+
+.item {
+  border: 1px solid #eaeaea;
+  border-left: 4px solid $accent;
+  padding: 20px 10px;
+
+  margin: 10px;
+  border-radius: 4px;
+
+
+  .logo {
+    margin-top: 5px;
+    height: 25px;
+  }
+
+  .label{
+    font-weight: 500;
+  }
+
+
+}

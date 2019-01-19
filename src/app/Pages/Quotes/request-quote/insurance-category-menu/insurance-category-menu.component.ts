@@ -11,13 +11,13 @@ export class InsuranceCategoryMenuComponent implements OnInit {
     items = [
 
         {
-            name: 'Motor Insurance',
+            name: 'Car Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Medical Insurance',
+            name: 'Travel Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
@@ -29,23 +29,16 @@ export class InsuranceCategoryMenuComponent implements OnInit {
 
         },
         {
-            name: 'Life Insurance',
+            name: 'Employee Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Travel Insurance',
-            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
-            link: 'sdfdsf'
-        },
-        {
-            name: 'Group Insurance',
+            name: 'Office Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
         }
-
-
     ];
 
     constructor() {

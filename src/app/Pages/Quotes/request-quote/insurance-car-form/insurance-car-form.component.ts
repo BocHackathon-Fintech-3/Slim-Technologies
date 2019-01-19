@@ -11,6 +11,8 @@ export interface StepType {
 }
 
 
+//https://www.coverfox.com
+
 @Component({
     selector: 'app-insurance-car-form',
     templateUrl: './insurance-car-form.component.html',
@@ -32,7 +34,7 @@ export class InsuranceCarFormComponent extends BaseComponent {
 
         {
             label: 'Car owner personal information',
-            completed: false,
+            completed: true,
             fields: [
 
                 {
@@ -130,7 +132,7 @@ export class InsuranceCarFormComponent extends BaseComponent {
         },
         {
             label: 'Vehicle Information',
-            completed: false,
+            completed: true,
             fields: [
 
                 {
@@ -180,6 +182,65 @@ export class InsuranceCarFormComponent extends BaseComponent {
                                 options: ['Third Party Only', 'Third Party Fire & Theft', 'Comprehensive'].map(item => {
                                     return { 'value': item, 'label': item };
                                 })
+                            },
+                        },
+
+                    ],
+                }
+
+
+            ],
+        },
+        {
+            label: 'Tell us your Needs',
+            completed: true,
+            fields: [
+
+                {
+                    fieldGroupClassName: 'row',
+                    fieldGroup: [
+                        {
+                            key: 'Checkbox',
+                            type: 'checkbox',
+                            templateOptions: {
+                                label: 'Checkbox',
+                                required: true,
+                            },
+                        },
+
+                        {
+                            key: 'Checkbox',
+                            type: 'checkbox',
+                            templateOptions: {
+                                label: 'Checkbox',
+                                required: true,
+                            },
+                        },
+
+                        {
+                            key: 'Checkbox',
+                            type: 'checkbox',
+                            templateOptions: {
+                                label: 'Checkbox',
+                                required: true,
+                            },
+                        },
+
+                        {
+                            key: 'Checkbox',
+                            type: 'checkbox',
+                            templateOptions: {
+                                label: 'Checkbox',
+                                required: true,
+                            },
+                        },
+
+                        {
+                            key: 'Checkbox',
+                            type: 'checkbox',
+                            templateOptions: {
+                                label: 'Checkbox',
+                                required: true,
                             },
                         },
 

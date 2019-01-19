@@ -1,0 +1,81 @@
+/deep/ .mat-card {
+
+  box-shadow: none !important;
+
+  &.left-col {
+
+    padding: 0 !important;
+  }
+
+}
+
+.left-col {
+
+  text-align: center;
+
+  .profile-image {
+
+    padding: 10px;
+    display: inline-block;
+    margin: 1rem auto 0 auto;
+    position: relative;
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #e0e0e0;
+    }
+
+    .actions {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      z-index: 11111111;
+    }
+
+  }
+
+  .progress {
+
+    .info {
+      font-size: 13px;
+      padding: 8px;
+
+      .label {
+
+      }
+
+      .percentage {
+        font-weight: 500;
+
+      }
+    }
+
+  }
+
+  .name {
+    margin-bottom: 8px;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .email {
+    font-size: 20px;
+  }
+
+  mat-divider {
+    margin: 20px 0;
+  }
+
+  mat-nav-list {
+    margin-top: 30px;
+  }
+
+}
+
+.right-col {
+  height: 100vh;
+}

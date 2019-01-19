@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class CollectionGalleryComponent {
 
     items = [
-        { title: 'General <br> Insurance', image: '/assets/media/General.jpg', link: '/quotes/request' },
+        { title: 'Car <br> Insurance', image: '/assets/media/car.jpg', link: '/quotes/request' },
         { title: 'Property <br> Insurance', image: '/assets/media/Property.jpg', link: '/quotes/request' },
-        { title: 'Marine <br> Insurance', image: '/assets/media/Marine.jpg', link: '/quotes/request' },
+        { title: 'Travel <br> Insurance', image: '/assets/media/travel.jpg', link: '/quotes/request' },
         { title: 'Fire <br> Insurance', image: '/assets/media/Fire.jpg', link: '/quotes/request' },
-        { title: 'Liability  <br> Insurance', image: '/assets/media/Liability.jpg', link: '/quotes/request' },
-        { title: 'Social <br> Insurance', image: '/assets/media/Social.jpg', link: '/quotes/request' },
+        { title: 'Office  <br> Insurance', image: '/assets/media/Liability.jpg', link: '/quotes/request' },
+        { title: 'Employee <br> Insurance', image: '/assets/media/employee.jpg', link: '/quotes/request' },
     ];
 
 }

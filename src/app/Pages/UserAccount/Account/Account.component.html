@@ -1,53 +1,87 @@
-<div class="inner-container">
-    <div class="bg-white final-receipt-page section-gap">
-        <div class="account-info">
-            <div class="container">
-                <div>
-                    <div fxLayoutAlign="flex-start">
-                        <div class="login-user-img">
-                            <img src="assets/images/user-4.jpg" width="70" alt="Active User">
-                        </div>
-                        <div class="px-3">
-                            <h4>Hi, John Doe</h4>
-                            <div class="text-muted text-xl">johndoe@deo.com</div>
-                        </div>
+<div class="container page">
+
+    <div fxLayout="row wrap"
+         fxLayout.lt-sm="column"
+         fxLayoutGap="20px"
+         fxLayoutAlign="flex-start">
+
+        <div fxFlex="0 1 calc(25% - 20px)" class="left-col">
+
+            <mat-card>
+                <div class="profile-image" (mouseenter)="enter($event)" (mouseleave)="leave($event)">
+                    <img class="profile-image" src="assets/images/user-4.jpg"
+                         alt="Photo of">
+
+                    <div *ngIf="showImageActions" class="actions">
+                        <button mat-icon-button (click)="file.click()">
+                            <mat-icon color="primary">edit</mat-icon>
+                        </button>
+
                     </div>
                 </div>
-                <div fxLayout="row wrap" class=" mt-3" fxLayout="20px">
+
+                <input type="file" #file [hidden]="true" (change)="fileChanged($event.target.files)" accept="image/*"/>
 
 
-                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20"
-                         class="user-nav-list">
-                        <mat-nav-list role="list">
-                            <mat-list-item role="listitem">
-                                <a [routerLink]="['/account/order-history']" routerLinkActive="tab-active">
-                                <i class="material-icons">history</i>
-                                <span> Order History</span> </a></mat-list-item>
-                            <mat-list-item role="listitem"><a [routerLink]="['/account/profile']"
-                                                              routerLinkActive="tab-active">
-                  <span><i class="material-icons">
-                      account_circle
-                    </i> Profile</span> </a></mat-list-item>
-                            <mat-list-item role="listitem"><a [routerLink]="['/account/address']"
-                                                              routerLinkActive="tab-active"><i
-                                    class="material-icons">
-                                location_on
-                            </i> <span>Addresses</span> </a></mat-list-item>
-                            <mat-list-item role="listitem"><a [routerLink]="['/account/cards']"
-                                                              routerLinkActive="tab-active"><i
-                                    class="material-icons">
-                                credit_card
-                            </i> <span>Saved Cards</span> </a></mat-list-item>
-                        </mat-nav-list>
-                    </div>
-                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80"
-                         class="user-content-wrapper">
-                        <div class="tab-container">
-                            <router-outlet></router-outlet>
-                        </div>
+                <div class="progress" *ngIf="uploadedPercentage">
+                    <mat-progress-bar
+                            color="primary"
+                            mode="determinate"
+                            [value]="uploadedPercentage">
+                    </mat-progress-bar>
+
+                    <div class="info">
+                        <span class="label">Uploading..</span>
+                        <span class="percentage" fxFlexAlign="end"> {{uploadedPercentage}}%</span>
+
                     </div>
                 </div>
-            </div>
+
+
+                <h3 class="name">Thomas Starvrou</h3>
+                <div class="email text-muted">thomas@gmail.com</div>
+
+                <mat-divider></mat-divider>
+
+                <mat-nav-list class="text-left">
+
+
+                    <mat-list-item>
+                        <button mat-icon-button>
+                            <mat-icon class="mr-2" color="accent">security</mat-icon>
+                            My Insurances
+                        </button>
+                    </mat-list-item>
+
+
+                    <mat-list-item [routerLink]="['/','account','quote-requests']">
+                        <button mat-icon-button>
+                            <mat-icon class="mr-2" color="accent">local_offer</mat-icon>
+                            Quote Requests
+                        </button>
+                    </mat-list-item>
+
+
+                    <mat-list-item [routerLink]="['/','account','profile']">
+                        <button mat-icon-button>
+                            <mat-icon class="mr-2" color="accent">account_circle</mat-icon>
+                            Profile
+                        </button>
+                    </mat-list-item>
+
+
+                    <mat-list-item>
+                        <button mat-icon-button>
+                            <mat-icon class="mr-2" color="accent">vpn_key</mat-icon>
+                            Change Password
+                        </button>
+                    </mat-list-item>
+
+                </mat-nav-list>
+            </mat-card>
+        </div>
+        <div fxFlex="0 1 calc(75% - 20px)" class="right-col">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

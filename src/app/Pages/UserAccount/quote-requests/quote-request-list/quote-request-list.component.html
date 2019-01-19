@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-header>
+
+        <mat-icon color="primary" matCardAvatar>local_offer</mat-icon>
+
+        <mat-card-title>
+            <h4>Quote Requests</h4>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <app-quote-request-item *ngFor="let item of items" [request]="item">
+        </app-quote-request-item>
+    </mat-card-content>
+</mat-card>

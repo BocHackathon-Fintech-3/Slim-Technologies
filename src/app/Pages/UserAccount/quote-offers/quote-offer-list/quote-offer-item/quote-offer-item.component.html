@@ -1,0 +1,187 @@
+<div class="row item {{offer.match}}">
+
+    <div class="col-2 align-center score">
+        <div class="c100 p{{offer.total}} small center">
+            <span>{{offer.total}}%
+            </span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-5 align-center">
+
+        <div class="row no-gutters company">
+
+            <div class="col-12">
+                <h4>{{offer.name}}</h4>
+                <h6 class="text-muted">{{offer.product}}</h6>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-3 align-center">
+        <mat-chip-list>
+            <mat-chip color="primary" selected *ngIf="offer.status=='quoted'" selected>Quoted</mat-chip>
+            <mat-chip color="warn" selected *ngIf="offer.status=='pending'">Pending</mat-chip>
+        </mat-chip-list>
+    </div>
+
+
+    <div class="col-2 text-right align-center">
+        <button mat-raised-button (click)="showDetails=!showDetails" color="primary" class="mr-3">Details
+        </button>
+    </div>
+
+
+    <div class="col-12 p-0">
+
+        <div *ngIf="showDetails" class="w-100 details d-block">
+
+            <div class="score">
+                <h4 class="title">
+                    Score
+                    <span class="percentage">
+                    {{offer.total}}%
+                </span>
+                </h4>
+
+                <div fxLayout="row" fxFlex="100" fxLayoutGap="20px">
+                    <div class="score-item" fxFlex="calc(20% - 20px)">
+                        <div class="c100 p20 small center">
+                            <span>{{offer.benefit}}%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="type">Benefits</div>
+                    </div>
+
+                    <div class="score-item" fxFlex="calc(20% - 20px)">
+                        <div class="c100 p{{offer.premium}} small  center">
+                            <span>{{offer.premium}}%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="type">Premium</div>
+                    </div>
+
+                    <div class="score-item" fxFlex="calc(20% - 20px)">
+                        <div class="c100 p{{offer.security}} small  center">
+                            <span>{{offer.security}}%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="type">Financial Security</div>
+                    </div>
+                    <div class="score-item" fxFlex="calc(20% - 20px)">
+                        <div class="c100 p{{offer.easeOfuse}} small  center">
+                            <span>{{offer.easeOfuse}}%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="type">Ease of Use</div>
+                    </div>
+
+                    <div class="score-item" fxFlex="calc(20% - 20px)">
+                        <div class="c100 p{{offer.customerSatisfaction}}% small  center">
+                            <span>{{offer.customerSatisfaction}}%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="type">Customer Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="information mt-4">
+
+                <div class="row">
+
+                    <div class="col-8 p-4">
+                        <h4 class="title">Who Provides the Insurance</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque commodi cum ea
+                            eligendi minus odio omnis reiciendis sapiente voluptas!
+                        </p>
+
+
+                        <h4 class="title">Duration</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maiores molestiae non
+                            repudiandae. Cumque iste maiores quaerat quam quos, voluptatem?
+                        </p>
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="key-benefits">
+                            <h5 class="title">Key Benefits</h5>
+                            <ul>
+                                <li *ngFor="let key of [1,2,3,4,5,6,7]">
+                                    <mat-icon color="primary">check_circle_outline</mat-icon>
+                                    <span>  Something</span>
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="policy-details">
+
+
+            </div>
+
+
+            <mat-divider></mat-divider>
+
+            <div class="details-footer p-4">
+                <div class="row">
+
+                    <div class="col-6 align-center">
+
+                        <div *ngIf="offer.status!=='quoted'" class="price">€ {{offer.price}}</div>
+                        <div *ngIf="offer.status!=='pending'" class="price">€ 100 - 200</div>
+
+
+                    </div>
+                    <div class="col-6 text-right align-center">
+                        <a [disabled]="offer.status==='pending'"
+                           mat-raised-button color="primary"
+                           href="https://sandbox.bankofcyprus.com/sandbox/login?original-url=https%3A%2F%2Fsandbox-apis.bankofcyprus.com%2Fdf-boc-org-sb%2Fsb%2Fpsd2%2Foauth2%2Fauthorize%3Fresponse_type%3Dcode%26redirect_uri%3Dhttps%3A%2F%2Flocalhost%26scope%3DUserOAuth2Security%26client_id%3D8322f28b-1858-4b5a-ad8e-450503df94c5%26subscriptionid%3DSubid000001-1540496279003%26rstate%3DeC3IoGo_DCdGPnKjh77bZwaRqguuMTZvY8F992lcjZs&app-name=New+app&appid=5bcda06be4b01066cc439d28&org=saturn-digital&orgid=5bc370dee4b01066cc4383d0&provider=df-boc-org-sb&providerid=5a439af0e4b07064433ef6e4&catalog=sb&catalogid=5a439af0e4b07064433ef6f0&g-transid=6f100acb5bd21b970c528b33&transid=206736179">
+                            Purchase Now</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>

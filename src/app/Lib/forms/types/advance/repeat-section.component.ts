@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FieldArrayType, FormlyFieldConfig, FormlyFormBuilder } from '@ngx-formly/core';
+import { FieldArrayType, FormlyFormBuilder } from '@ngx-formly/core';
 
 @Component({
     selector: 'formly-repeat-section',

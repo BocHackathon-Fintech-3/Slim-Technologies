@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+
+        <mat-icon color="primary" matCardAvatar>local_offer</mat-icon>
+
+        <mat-card-title>
+            <h4>Offers</h4>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <app-quote-offer-item *ngFor="let item of offers" [offer]="item">
+        </app-quote-offer-item>
+
+    </mat-card-content>
+</mat-card>

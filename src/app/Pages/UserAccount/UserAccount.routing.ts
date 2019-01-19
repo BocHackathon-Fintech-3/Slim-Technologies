@@ -6,6 +6,8 @@ import { EditProfileComponent } from './EditProfile/EditProfile.component';
 import { CardsComponent } from './Cards/Cards.component';
 import { AddressComponent } from './Address/Address.component';
 import { OrderHistoryComponent } from './OrderHistory/OrderHistory.component';
+import { QuoteRequestListComponent } from './quote-requests/quote-request-list/quote-request-list.component';
+import { QuoteOfferListComponent } from './quote-offers/quote-offer-list/quote-offer-list.component';
 
 export const UserAccountRoutes: Routes = [
     {
@@ -16,6 +18,17 @@ export const UserAccountRoutes: Routes = [
                 path: 'profile',
                 component: ProfileComponent
             },
+
+            {
+                path: 'quote-requests',
+                component: QuoteRequestListComponent
+            },
+
+            {
+                path: 'offers',
+                component: QuoteOfferListComponent
+            },
+
             {
                 path: 'cards',
                 component: CardsComponent
@@ -29,7 +42,7 @@ export const UserAccountRoutes: Routes = [
                 component: OrderHistoryComponent
             },
             {
-                path: 'profile/edit',
+                path: 'profile/edit', pathMatch: 'full',
                 component: EditProfileComponent
             }
         ]
