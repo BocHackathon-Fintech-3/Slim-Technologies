@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { BaseComponent } from '../../../../Lib/components/base-component.class';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormGroup } from '@angular/forms';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 import { MatStepper } from '@angular/material';
 
@@ -211,6 +211,14 @@ export class InsuranceCarFormComponent extends BaseComponent {
     }
 
     submit() {
-        this.completed.emit(true);
+
+        this.setLoading(true);
+
+        setTimeout(() => {
+            this.completed.emit(true);
+        }, 2000);
+
     }
+
+
 }

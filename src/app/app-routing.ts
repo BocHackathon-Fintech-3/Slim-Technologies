@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 
 import { MainComponent } from './Main/Main.component';
 import { HomeTwoComponent } from './Pages/Home/HomeTwo/HomeTwo.component';
-import { HomeThreeComponent } from './Pages/Home/HomeThree/HomeThree.component';
 import { CartComponent } from './Pages/Cart/Cart.component';
 import { NotFoundComponent } from './Pages/NotFound/NotFound.component';
 
@@ -29,15 +28,7 @@ export const AppRoutes: Routes = [
                 path: 'quotes',
                 loadChildren: './Pages/Quotes/quotes.module#QuotesModule'
             },
-            
-            {
-                path: 'home-three',
-                component: HomeThreeComponent
-            },
-            {
-                path: 'products',
-                loadChildren: './Pages/Products/Products.module#ProductsModule'
-            },
+
             {
                 path: 'cart',
                 component: CartComponent
@@ -57,10 +48,6 @@ export const AppRoutes: Routes = [
             {
                 path: '',
                 loadChildren: './Pages/About/About.module#AboutModule'
-            },
-            {
-                path: 'blogs',
-                loadChildren: './Pages/Blogs/Blogs.module#BlogsModule'
             },
             {
                 path: 'account',

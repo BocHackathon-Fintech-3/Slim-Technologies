@@ -18,7 +18,7 @@
                 <button  mat-flat-button color="accent" *ngIf="!last" class="btn btn-primary" type="button"
                         [disabled]="!form.at(index).valid" (click)="nextStep(index)">Next
                 </button>
-                <button *ngIf="last" mat-flat-button color="primary" class="btn btn-primary" [disabled]="!form.valid"
+                <button *ngIf="last" mat-flat-button color="primary" class="btn btn-primary" [libSpinBtn]="loading" [disabled]="!form.valid"
                         type="submit">Next Step
                 </button>
             </div>

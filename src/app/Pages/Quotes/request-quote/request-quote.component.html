@@ -2,12 +2,11 @@
 
     <div fxLayout="row " fxLayoutGap="25px">
 
-        <div class="sidebar mat-background-warn" fxFlex="20">
+        <div class="sidebar mat-background-warn" fxFlex="24">
             <app-insurance-category-menu></app-insurance-category-menu>
         </div>
 
-
-        <div fxFlex="80" fxLayout.lt-sm="column">
+        <div fxFlex="76" fxLayout.lt-sm="column">
 
             <mat-card class="w-100 display-block">
 
@@ -34,7 +33,9 @@
 
                                 <div class="mt-5">
                                     <button mat-flat-button matStepperPrevious class="mr-2">Back</button>
-                                    <button mat-flat-button color="primary" matStepperNext>Submit Request</button>
+                                    <button mat-flat-button color="primary" (click)="stepCompleted('pickAgencies')" [libSpinBtn]="saving">Submit
+                                        Request
+                                    </button>
                                 </div>
                             </div>
                         </mat-step>

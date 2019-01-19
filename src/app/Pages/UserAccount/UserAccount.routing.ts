@@ -7,31 +7,31 @@ import { CardsComponent } from './Cards/Cards.component';
 import { AddressComponent } from './Address/Address.component';
 import { OrderHistoryComponent } from './OrderHistory/OrderHistory.component';
 
-export const UserAccountRoutes : Routes = [
-   {
-      path : '',
-      component : AccountComponent,
-      children: [ 
-         {
-            path: 'profile',
-            component: ProfileComponent
-         },
-         { 
-            path: 'cards', 
-            component: CardsComponent 
-         },
-         { 
-            path: 'address', 
-            component: AddressComponent 
-         },
-         { 
-            path: 'order-history', 
-            component: OrderHistoryComponent 
-         },
-         {
-            path: 'profile/edit',
-            component: EditProfileComponent
-         }
-      ]
-   }
-]
+export const UserAccountRoutes: Routes = [
+    {
+        path: '',
+        component: AccountComponent,
+        children: [
+            {
+                path: 'profile',
+                component: ProfileComponent
+            },
+            {
+                path: 'cards',
+                component: CardsComponent
+            },
+            {
+                path: 'address',
+                component: AddressComponent
+            },
+            {
+                path: 'order-history',
+                component: OrderHistoryComponent
+            },
+            {
+                path: 'profile/edit',
+                component: EditProfileComponent
+            }
+        ]
+    }
+];

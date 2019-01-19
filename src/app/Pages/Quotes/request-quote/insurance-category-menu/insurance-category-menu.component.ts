@@ -11,35 +11,40 @@ export class InsuranceCategoryMenuComponent implements OnInit {
     items = [
 
         {
-            name: 'Car Insurance',
+            name: 'Motor Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Car Insurance',
+            name: 'Medical Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Car Insurance',
+            name: 'Property Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Car Insurance',
+            name: 'Life Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
 
         },
         {
-            name: 'Car Insurance',
+            name: 'Travel Insurance',
             icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
             link: 'sdfdsf'
-
+        },
+        {
+            name: 'Group Insurance',
+            icon: 'https://www.pitsasinsurances.com/img/products-img/vehicle-color.svg',
+            link: 'sdfdsf'
         }
+
 
     ];
 
