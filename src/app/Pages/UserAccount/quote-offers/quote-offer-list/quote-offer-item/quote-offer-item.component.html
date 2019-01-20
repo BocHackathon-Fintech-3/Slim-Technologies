@@ -31,15 +31,24 @@
     </div>
 
 
-    <div class="col-1 text-center align-center">
-        <h4 class="m-0">€{{offer.price}}</h4>
+    <div *ngIf="offer.status==='quoted'" class="col-1 text-center align-center">
+        <h4 class="m-0">
+            <div class="price">€{{offer.price}}</div>
+        </h4>
     </div>
-    <div class="col-3 text-center align-center">
 
-        <a *ngIf="offer.status!=='pending'"
-           mat-raised-button color="accent"
-           (click)="$event.stopPropagation();"
-           href="https://online.bankofcyprus.com/netteller-web/Login.faces">
+    <div *ngIf="offer.status==='pending'" class="col-3 text-left align-center">
+        <h4 class="m-0">
+            <div class="price">€100-200</div>
+        </h4>
+    </div>
+
+
+    <div *ngIf="offer.status!=='pending'" class="col-3 text-center align-center">
+        <a
+                mat-raised-button color="accent"
+                (click)="$event.stopPropagation();"
+                href="https://online.bankofcyprus.com/netteller-web/Login.faces">
             <mat-icon style="font-size: 19px; margin-top: 1px;"> shopping_cart</mat-icon>
             Purchase</a>
     </div>
@@ -199,8 +208,6 @@
                             <div class="label">Price</div>
                             <div *ngIf="offer.status==='quoted'" class="price">€{{offer.price}}</div>
                             <div *ngIf="offer.status==='pending'" class="price">€100 - €200</div>
-
-
                         </div>
                         <div class="col-6 text-right align-center">
                             <a [disabled]="offer.status==='pending'"

@@ -85,7 +85,7 @@ export const OFFERS = [
         match: 'average',
         name: 'GAP Insurance',
         product: 'Car Insurance',
-        price: '35',
+        price: '210',
         benefit: 50,
         premium: 70,
         security: 60,
