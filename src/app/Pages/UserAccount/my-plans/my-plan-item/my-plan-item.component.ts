@@ -1,18 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-quote-offer-item',
-    templateUrl: './quote-offer-item.component.html',
-    styleUrls: ['./quote-offer-item.component.scss']
+    selector: 'app-my-plan-item',
+    templateUrl: './my-plan-item.component.html',
+    styleUrls: ['./my-plan-item.component.scss']
 })
-export class QuoteOfferItemComponent implements OnInit {
+export class MyPlanItemComponent implements OnInit {
 
     @Input()
-    offer: {
+    plan: {
         image,
         match,
         name,
         product,
+        icon,
         price,
         benefit,
         premium,
@@ -20,18 +21,15 @@ export class QuoteOfferItemComponent implements OnInit {
         easeOfuse,
         customerSatisfaction,
         total,
-        whoProvidesInsurance,
-        duration,
-        makingClaim,
-        whatIfiWantToCancel,
-        administrationDetails
         status,
-        matchBenefits,
-        notMatchBenefits,
-        extraBenefits,
+        startDate,
+        expiresDate,
+        autoRenew,
+        matchBenefits
     };
 
     showDetails = false;
+
 
     getColor(value: number): string {
         if (value >= 80) {
@@ -48,6 +46,4 @@ export class QuoteOfferItemComponent implements OnInit {
 
     ngOnInit() {
     }
-
-
 }

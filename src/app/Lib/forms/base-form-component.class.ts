@@ -11,9 +11,8 @@ export interface IFormComponent {
 export abstract class BaseFormComponent extends BaseComponent implements IFormComponent {
 
     saving: boolean = false;
-    form = new FormGroup({});
-    formFields: FormlyFieldConfig[] = [];
-
+    form: any = new FormGroup({});
+    formFields: FormlyFieldConfig[] | any = [];
 
     submit() {
 
@@ -22,7 +21,9 @@ export abstract class BaseFormComponent extends BaseComponent implements IFormCo
             control.markAsTouched({ onlySelf: true });       // {3}
         });
 
-        if (!this.form.valid) return;
+        if (!this.form.valid) {
+            return;
+        }
         this.save();
     }
 
@@ -76,7 +77,7 @@ export abstract class BaseFormComponent extends BaseComponent implements IFormCo
 
         formFields.forEach(item => {
             if (item.fieldGroup && item.fieldGroup.length > 0) {
-                fields.push(... this.getFormKeys(item.fieldGroup));
+                fields.push(...this.getFormKeys(item.fieldGroup));
             } else {
                 if (typeof item.key !== 'undefined') {
                     fields.push(item.key);

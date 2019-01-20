@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-icon color="primary" matCardAvatar>inbox</mat-icon>
+    <mat-card-title>
+      <h4>My Plans</h4>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <app-my-plan-item *ngFor="let item of plans" [plan]="item">
+    </app-my-plan-item>
+
+  </mat-card-content>
+</mat-card>

@@ -8,6 +8,7 @@ import { AddressComponent } from './Address/Address.component';
 import { OrderHistoryComponent } from './OrderHistory/OrderHistory.component';
 import { QuoteRequestListComponent } from './quote-requests/quote-request-list/quote-request-list.component';
 import { QuoteOfferListComponent } from './quote-offers/quote-offer-list/quote-offer-list.component';
+import { MyPlansComponent } from './my-plans/my-plans.component';
 
 export const UserAccountRoutes: Routes = [
     {
@@ -27,6 +28,11 @@ export const UserAccountRoutes: Routes = [
             {
                 path: 'offers',
                 component: QuoteOfferListComponent
+            },
+
+            {
+                path: 'plans',
+                component: MyPlansComponent
             },
 
             {

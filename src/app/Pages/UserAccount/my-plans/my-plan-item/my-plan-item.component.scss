@@ -1,4 +1,4 @@
-@import "../../../../../../assets/scss/material-theme";
+@import "../../../../../assets/scss/material-theme";
 
 
 .score-item {
@@ -40,13 +40,22 @@
 .item {
 
 
-  cursor: pointer;
-
-
   .auto-renew {
     color: $primary;
-    font-size: 10px;
+    font-size: 12px;
   }
+
+
+  .fa {
+
+    font-size: 30px;
+    color: $accent;
+    position: relative;
+    top: -4px;
+  }
+
+
+  cursor: pointer;
 
   &.red {
     border-left: 4px solid $warn;

@@ -44,6 +44,8 @@ import { QuoteRequestItemComponent } from './quote-requests/quote-request-list/q
 import { MomentModule } from 'ngx-moment';
 import { QuoteOfferListComponent } from './quote-offers/quote-offer-list/quote-offer-list.component';
 import { QuoteOfferItemComponent } from './quote-offers/quote-offer-list/quote-offer-item/quote-offer-item.component';
+import { MyPlansComponent } from './my-plans/my-plans.component';
+import { MyPlanItemComponent } from './my-plans/my-plan-item/my-plan-item.component';
 
 
 @NgModule({
@@ -91,6 +93,8 @@ import { QuoteOfferItemComponent } from './quote-offers/quote-offer-list/quote-o
         QuoteRequestItemComponent,
         QuoteOfferListComponent,
         QuoteOfferItemComponent,
+        MyPlansComponent,
+        MyPlanItemComponent,
     ]
 })
 export class UserAccountModule {

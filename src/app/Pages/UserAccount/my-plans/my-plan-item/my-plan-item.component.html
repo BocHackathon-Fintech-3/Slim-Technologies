@@ -1,66 +1,73 @@
-<div class="row item {{getColor(offer.total)}}" (click)="showDetails=!showDetails">
+<div class="row item no-gutters {{getColor(plan.total)}}" (click)="showDetails=!showDetails">
 
-    <div class="col-2 align-center score score-item">
-        <div class="c100 p{{offer.total}} small center {{getColor(offer.total)}}">
-            <span>{{offer.total}}%
-            </span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-4 align-center pl-4">
+    <div class="col-4 align-center pr-1">
 
-        <div class="row no-gutters company">
+        <div class="row no-gutters">
 
-            <div class="col-12">
-                <h4 style="font-size: 1.8em;">{{offer.name}}</h4>
-                <h6 class="text-muted">{{offer.product}}</h6>
+            <div class="col-3 text-center align-center">
+                <i class="fa fa-{{plan.icon}}"></i>
             </div>
 
+
+            <div class="col-9 align-center pl-1">
+
+                <div class="row no-gutters company">
+
+                    <div class="col-12">
+                        <h4 style="font-size: 1.8em;">{{plan.name}}</h4>
+                        <h6 class="text-muted">{{plan.product}}</h6>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    <div class="col-2 align-center">
-        <mat-chip-list>
-            <mat-chip color="primary" selected *ngIf="offer.status=='quoted'" selected>Quoted</mat-chip>
-            <mat-chip color="warn" selected *ngIf="offer.status=='pending'">Pending</mat-chip>
-        </mat-chip-list>
     </div>
 
 
-    <div class="col-1 text-center align-center">
-        <h4 class="m-0">€{{offer.price}}</h4>
-    </div>
-    <div class="col-3 text-center align-center">
-
-        <a *ngIf="offer.status!=='pending'"
-           mat-raised-button color="accent"
-           (click)="$event.stopPropagation();"
-           href="https://online.bankofcyprus.com/netteller-web/Login.faces">
-            <mat-icon style="font-size: 19px; margin-top: 1px;"> shopping_cart</mat-icon>
-            Purchase</a>
+    <div class="col-3 align-center">
+        <div class="label">Issue On</div>
+        <span class="text-muted date value">{{plan.startDate | amDateFormat:'LL'}}</span>
     </div>
 
+
+    <div class="col-3 align-center">
+        <div class="label"> Expires On <span class="auto-renew">(Auto Renew)</span></div>
+        <span class="text-muted date value">{{plan.expiresDate | amDateFormat:'LL'}}</span>
+    </div>
+
+
+    <div class="col-2 text-right align-center">
+        <button mat-raised-button color='accent' (click)="$event.stopPropagation()" [matMenuTriggerFor]="menu"
+                class="mr-3">Actions
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Cancel Insurance</button>
+            <button mat-menu-item>Update Details</button>
+            <button mat-menu-item>Change Policy</button>
+            <button mat-menu-item>Change Premium</button>
+        </mat-menu>
+
+    </div>
 
     <div class="col-12 p-0">
 
-        <div *ngIf="showDetails" class="w-100 details d-block align-center">
+        <div *ngIf="showDetails" class="w-100 details d-block align-center" (click)="$event.stopPropagation()">
 
             <div class="score">
                 <h4 class="title" fxFlexAlign="center">
                     Score
                     <span class="percentage">
-                    {{offer.total}}%
+                    {{plan.total}}%
                 </span>
                 </h4>
 
                 <div fxLayout="row" fxFlex="100" fxLayoutGap="20px">
                     <div class="score-item" fxFlex="calc(20% - 20px)">
-                        <div class="c100 p{{offer.benefit}} small center {{getColor(offer.benefit)}}">
-                            <span>{{offer.benefit}}%</span>
+                        <div class="c100 p20 small center {{getColor(plan.benefit)}}">
+                            <span>{{plan.benefit}}%</span>
                             <div class="slice">
                                 <div class="bar"></div>
                                 <div class="fill"></div>
@@ -70,8 +77,8 @@
                     </div>
 
                     <div class="score-item" fxFlex="calc(20% - 20px)">
-                        <div class="c100 p{{offer.premium}} small  center {{getColor(offer.premium)}}">
-                            <span>{{offer.premium}}%</span>
+                        <div class="c100 p{{plan.premium}} small  center {{getColor(plan.premium)}}">
+                            <span>{{plan.premium}}%</span>
                             <div class="slice">
                                 <div class="bar"></div>
                                 <div class="fill"></div>
@@ -81,8 +88,8 @@
                     </div>
 
                     <div class="score-item" fxFlex="calc(20% - 20px)">
-                        <div class="c100 p{{offer.security}} small  center {{getColor(offer.security)}}">
-                            <span>{{offer.security}}%</span>
+                        <div class="c100 p{{plan.security}} small  center {{getColor(plan.security)}}">
+                            <span>{{plan.security}}%</span>
                             <div class="slice">
                                 <div class="bar"></div>
                                 <div class="fill"></div>
@@ -91,8 +98,8 @@
                         <div class="type">Financial Security</div>
                     </div>
                     <div class="score-item" fxFlex="calc(20% - 20px)">
-                        <div class="c100 p{{offer.easeOfuse}} small  center {{getColor(offer.easeOfuse)}}">
-                            <span>{{offer.easeOfuse}}%</span>
+                        <div class="c100 p{{plan.easeOfuse}} small  center {{getColor(plan.easeOfuse)}}">
+                            <span>{{plan.easeOfuse}}%</span>
                             <div class="slice">
                                 <div class="bar"></div>
                                 <div class="fill"></div>
@@ -102,8 +109,8 @@
                     </div>
 
                     <div class="score-item" fxFlex="calc(20% - 20px)">
-                        <div class="c100 p{{offer.customerSatisfaction}} small  center {{getColor(offer.customerSatisfaction)}}">
-                            <span>{{offer.customerSatisfaction}}%</span>
+                        <div class="c100 p{{plan.customerSatisfaction}} small  center {{getColor(plan.customerSatisfaction)}}">
+                            <span>{{plan.customerSatisfaction}}%</span>
                             <div class="slice">
                                 <div class="bar"></div>
                                 <div class="fill"></div>
@@ -136,39 +143,22 @@
                             </p>
 
 
-                            <div class="action pt-2 pb-4">
-                                <a mat-button href="/assets/media/policy.pdf" download
-                                   (click)="$event.stopPropagation()">
+                            <div class="action pt-2 pb-3">
+                                <a mat-button href="/assets/media/policy.pdf" download>
                                     <mat-icon class="mr-2" color="accent">cloud_download</mat-icon>
                                     Download Policy
                                 </a>
-
                             </div>
+
                         </div>
 
                         <div class="col-5">
 
                             <div class="key-benefits">
-                                <h5 class="title">Match Benefits</h5>
+                                <h5 class="title">Key Benefits</h5>
                                 <ul>
-                                    <li *ngFor="let key of offer.matchBenefits">
+                                    <li *ngFor="let key of plan.matchBenefits">
                                         <mat-icon color="primary">check_circle</mat-icon>
-                                        <span> {{key}}</span>
-                                    </li>
-                                </ul>
-
-                                <h5 *ngIf="offer.extraBenefits.length" class="title">Extra Benefits</h5>
-                                <ul>
-                                    <li *ngFor="let key of offer.extraBenefits">
-                                        <mat-icon color="primary">check_circle</mat-icon>
-                                        <span> {{key}}</span>
-                                    </li>
-                                </ul>
-
-                                <h5 *ngIf="offer.notMatchBenefits.length" class="title">Not Match Benefits</h5>
-                                <ul>
-                                    <li *ngFor="let key of offer.notMatchBenefits">
-                                        <mat-icon color="warn">cancel</mat-icon>
                                         <span> {{key}}</span>
                                     </li>
                                 </ul>
@@ -197,16 +187,7 @@
 
                         <div class="col-6 align-center">
                             <div class="label">Price</div>
-                            <div *ngIf="offer.status==='quoted'" class="price">€{{offer.price}}</div>
-                            <div *ngIf="offer.status==='pending'" class="price">€100 - €200</div>
-
-
-                        </div>
-                        <div class="col-6 text-right align-center">
-                            <a [disabled]="offer.status==='pending'"
-                               mat-raised-button color="primary"
-                               href="https://online.bankofcyprus.com/netteller-web/Login.faces">
-                                Purchase Now</a>
+                            <div class="price">€{{plan.price}}</div>
                         </div>
                     </div>
                 </div>

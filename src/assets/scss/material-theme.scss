@@ -7,7 +7,7 @@
 @include mat-core();
 
 // Define the default theme (same as the example above).
-$my-theme-primary: mat-palette($mat-green,800);
+$my-theme-primary: mat-palette($mat-green,900);
 $my-theme-accent:  mat-palette($mat-yellow, 800);
 $my-theme-warn:  mat-palette($mat-red, 600);
 $my-light-theme:   mat-light-theme($my-theme-primary, $my-theme-accent);

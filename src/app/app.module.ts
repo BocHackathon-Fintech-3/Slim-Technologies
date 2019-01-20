@@ -67,6 +67,7 @@ import { NotFoundComponent } from './Pages/NotFound/NotFound.component';
 import { SideBarMenuComponent } from './Layouts/Menu/SidebarMenu/SidebarMenu.component';
 import { PaymentDetailSideBarComponent } from './Layouts/PaymentDetailSideBar/PaymentDetailSideBar.component';
 import { FixedHeaderComponent } from './Layouts/Header/FixedHeader/FixedHeader.component';
+import { BlockUIModule } from 'ng-block-ui';
 
 
 /********** Custom option for ngx-translate ******/
@@ -133,6 +134,7 @@ export function createTranslateLoader(http: HttpClient) {
         AngularFireDatabaseModule,
         ToastaModule.forRoot(),
         BidiModule,
+        BlockUIModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

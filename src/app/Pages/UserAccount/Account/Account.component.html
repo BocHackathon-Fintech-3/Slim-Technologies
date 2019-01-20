@@ -9,7 +9,7 @@
 
             <mat-card>
                 <div class="profile-image" (mouseenter)="enter($event)" (mouseleave)="leave($event)">
-                    <img class="profile-image" src="assets/images/user-4.jpg"
+                    <img class="profile-image" src="assets/media/thomas.jpg"
                          alt="Photo of">
 
                     <div *ngIf="showImageActions" class="actions">
@@ -38,7 +38,7 @@
                 </div>
 
 
-                <h3 class="name">Thomas Starvrou</h3>
+                <h3 class="name">Thomas Stavrou</h3>
                 <div class="email text-muted">thomas@gmail.com</div>
 
                 <mat-divider></mat-divider>
@@ -46,7 +46,7 @@
                 <mat-nav-list class="text-left">
 
 
-                    <mat-list-item>
+                    <mat-list-item [routerLink]="['/','account','plans']">
                         <button mat-icon-button>
                             <mat-icon class="mr-2" color="accent">security</mat-icon>
                             My Insurance Plans
