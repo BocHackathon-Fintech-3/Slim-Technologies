@@ -31,19 +31,19 @@ export class MainComponent implements OnInit {
                 private router: Router,
                 meta: Meta, title: Title) {
 
-        title.setTitle('Embryo - Angular Material Design eCommerce Template');
+        // title.setTitle('Embryo - Angular Material Design eCommerce Template');
 
-        meta.addTags([
-            { name: 'author', content: 'The IRON Network' },
-            {
-                name: 'keywords',
-                content: ' angular, angular 2, angular 6, angular 7, angular material, clean, creative, ecommerce, frontend, online store, shop, shopping, store, typescript, ui framework '
-            },
-            {
-                name: 'description',
-                content: 'Embryo is an E-Commerce angular 7 based template with material design. It also comes with Angular cli. Now you have all the power to maintain your ecommerce site. Responsive design gives your user to use in any modern devices. Clean Code gives you the power to customize the code as per as your requirments. Embryo has all the basics functionality which is required in ecommerce site. Rtl design makes the multi-language support with more easy way.'
-            }
-        ]);
+        // meta.addTags([
+        //     { name: 'author', content: 'The IRON Network' },
+        //     {
+        //         name: 'keywords',
+        //         content: ' angular, angular 2, angular 6, angular 7, angular material, clean, creative, ecommerce, frontend, online store, shop, shopping, store, typescript, ui framework '
+        //     },
+        //     {
+        //         name: 'description',
+        //         content: 'Embryo is an E-Commerce angular 7 based template with material design. It also comes with Angular cli. Now you have all the power to maintain your ecommerce site. Responsive design gives your user to use in any modern devices. Clean Code gives you the power to customize the code as per as your requirments. Embryo has all the basics functionality which is required in ecommerce site. Rtl design makes the multi-language support with more easy way.'
+        //     }
+        // ]);
 
         if (this.embryoService.isDirectionRtl) {
             this.isRtl = 'rtl';
