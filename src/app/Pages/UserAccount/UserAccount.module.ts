@@ -54,6 +54,7 @@ import {AccountAccessComponent} from './account-access/account-access.component'
 import {FormlyModule} from '@ngx-formly/core';
 import {FormModule} from '../../Lib/forms/form.module';
 import {DirectivesModule} from '../../Lib/directives/directives.module';
+import { VerificationDocumentComponent } from './verification-documents/verification-document/verification-document.component';
 
 
 @NgModule({
@@ -110,6 +111,7 @@ import {DirectivesModule} from '../../Lib/directives/directives.module';
     BankAccountsComponent,
     CreditReportComponent,
     AccountAccessComponent,
+    VerificationDocumentComponent,
   ]
 })
 export class UserAccountModule {

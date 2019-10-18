@@ -5,11 +5,22 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 
+.mat-card {
 
-.mat-card{
-
-  h4{
+  h4 {
     position: relative;
     top: -6px;
+  }
+}
+
+.mat-chip-list {
+
+  &.small {
+    mat-chip {
+      min-height: 27px;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 }
