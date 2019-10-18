@@ -1,89 +1,109 @@
 <div class="container page">
 
-    <div fxLayout="row wrap"
-         fxLayout.lt-sm="column"
-         fxLayoutGap="20px"
-         fxLayoutAlign="flex-start">
+  <div fxLayout="row wrap"
+       fxLayout.lt-sm="column"
+       fxLayoutGap="20px"
+       fxLayoutAlign="flex-start">
 
-        <div fxFlex="0 1 calc(25% - 20px)" class="left-col">
+    <div fxFlex="0 1 calc(25% - 20px)" class="left-col">
 
-            <mat-card>
-                <div class="profile-image" (mouseenter)="enter($event)" (mouseleave)="leave($event)">
-                    <img class="profile-image" src="assets/media/thomas.jpg"
-                         alt="Photo of">
+      <mat-card>
+        <div class="profile-image" (mouseenter)="enter($event)" (mouseleave)="leave($event)">
+          <img class="profile-image" src="assets/media/thomas.jpg"
+               alt="Photo of">
 
-                    <div *ngIf="showImageActions" class="actions">
-                        <button mat-icon-button (click)="file.click()">
-                            <mat-icon color="primary">edit</mat-icon>
-                        </button>
+          <div *ngIf="showImageActions" class="actions">
+            <button mat-icon-button (click)="file.click()">
+              <mat-icon color="primary">edit</mat-icon>
+            </button>
 
-                    </div>
-                </div>
-
-                <input type="file" #file [hidden]="true" (change)="fileChanged($event.target.files)" accept="image/*"/>
-
-
-                <div class="progress" *ngIf="uploadedPercentage">
-                    <mat-progress-bar
-                            color="primary"
-                            mode="determinate"
-                            [value]="uploadedPercentage">
-                    </mat-progress-bar>
-
-                    <div class="info">
-                        <span class="label">Uploading..</span>
-                        <span class="percentage" fxFlexAlign="end"> {{uploadedPercentage}}%</span>
-
-                    </div>
-                </div>
-
-
-                <h3 class="name">Thomas Stavrou</h3>
-                <div class="email text-muted">thomas@gmail.com</div>
-
-                <mat-divider></mat-divider>
-
-                <mat-nav-list class="text-left">
-
-
-                    <mat-list-item [routerLink]="['/','account','plans']">
-                        <button mat-icon-button>
-                            <mat-icon class="mr-2" color="accent">security</mat-icon>
-                            My Insurance Plans
-                        </button>
-                    </mat-list-item>
-
-
-                    <mat-list-item [routerLink]="['/','account','quote-requests']">
-                        <button mat-icon-button>
-                            <mat-icon class="mr-2" color="accent">local_offer</mat-icon>
-                            Quote Requests
-                        </button>
-                    </mat-list-item>
-
-
-                    <mat-list-item [routerLink]="['/','account','profile']">
-                        <button mat-icon-button>
-                            <mat-icon class="mr-2" color="accent">account_circle</mat-icon>
-                            Profile
-                        </button>
-                    </mat-list-item>
-
-
-                    <mat-list-item>
-                        <button mat-icon-button>
-                            <mat-icon class="mr-2" color="accent">vpn_key</mat-icon>
-                            Change Password
-                        </button>
-                    </mat-list-item>
-
-                </mat-nav-list>
-            </mat-card>
+          </div>
         </div>
 
-        <div fxFlex="0 1 calc(75% - 20px)" class="right-col" style="height: 100%">
-            <router-outlet></router-outlet>
+        <input type="file" #file [hidden]="true" (change)="fileChanged($event.target.files)" accept="image/*"/>
+
+
+        <div class="progress" *ngIf="uploadedPercentage">
+          <mat-progress-bar
+            color="primary"
+            mode="determinate"
+            [value]="uploadedPercentage">
+          </mat-progress-bar>
+
+          <div class="info">
+            <span class="label">Uploading..</span>
+            <span class="percentage" fxFlexAlign="end"> {{uploadedPercentage}}%</span>
+
+          </div>
         </div>
 
+
+        <h3 class="name">Thomas Stavrou</h3>
+        <div class="email text-muted">thomas@gmail.com</div>
+
+        <mat-divider></mat-divider>
+
+        <mat-nav-list class="text-left">
+
+
+          <mat-list-item [routerLink]="['/','account','credit-report']">
+            <button mat-icon-button>
+              <mat-icon class="mr-2" color="accent">security</mat-icon>
+              My Credit Report
+            </button>
+          </mat-list-item>
+
+
+          <mat-list-item [routerLink]="['/','account','personal-details']">
+            <button mat-icon-button>
+              <mat-icon class="mr-2" color="accent">account_circle</mat-icon>
+              Personal Details
+            </button>
+          </mat-list-item>
+
+          <mat-list-item [routerLink]="['/','account','verification-documents']">
+            <button mat-icon-button>
+              <mat-icon class="mr-2" color="accent">folder_open</mat-icon>
+              Verification Documents
+            </button>
+          </mat-list-item>
+
+          <mat-list-item [routerLink]="['/','account','bank-accounts']">
+            <button mat-icon-button>
+              <mat-icon class="mr-2" color="accent">account_balance</mat-icon>
+              My Bank Accounts
+            </button>
+          </mat-list-item>
+
+
+          <mat-list-item [routerLink]="['/','account','access']">
+            <button mat-icon-button>
+              <mat-icon class="mr-2" color="accent">group</mat-icon>
+              Account Access
+            </button>
+          </mat-list-item>
+
+          <!--          <mat-list-item [routerLink]="['/','account','profile']">-->
+          <!--            <button mat-icon-button>-->
+          <!--              <mat-icon class="mr-2" color="accent">account_circle</mat-icon>-->
+          <!--              Profile-->
+          <!--            </button>-->
+          <!--          </mat-list-item>-->
+
+<!--          <mat-list-item>-->
+<!--            <button mat-icon-button>-->
+<!--              <mat-icon class="mr-2" color="accent">vpn_key</mat-icon>-->
+<!--              Change Password-->
+<!--            </button>-->
+<!--          </mat-list-item>-->
+
+        </mat-nav-list>
+      </mat-card>
     </div>
+
+    <div fxFlex="0 1 calc(75% - 20px)" class="right-col" style="height: 100%">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
 </div>

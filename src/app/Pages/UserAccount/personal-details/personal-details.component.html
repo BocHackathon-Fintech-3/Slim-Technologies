@@ -1,0 +1,35 @@
+<script src="../../../app.component.spec.ts"></script>
+<mat-card class="w-100 display-block">
+
+  <mat-card-header>
+
+    <mat-icon color="primary" matCardAvatar>account_circle</mat-icon>
+
+    <mat-card-title>
+      <h4>Personal Details</h4>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <formly-form
+        [form]="form"
+        [options]="formOptions"
+        [fields]="formFields">
+        <div class="row mt-2">
+          <div class="col-md-12">
+            <button mat-raised-button color="primary" type="submit" [libSpinBtn]="saving">Save</button>
+          </div>
+        </div>
+
+      </formly-form>
+
+    </form>
+
+
+  </mat-card-content>
+</mat-card>
+
+
+
