@@ -1,0 +1,17 @@
+.item {
+  margin-bottom: 20px;
+  border: 1px solid #dedede;
+
+  mat-card-title {
+    mat-icon {
+      position: relative;
+      top: 4px;
+      left: -7px;
+    }
+  }
+
+  mat-chip-list {
+    position: relative;
+    top: 6px;
+  }
+}

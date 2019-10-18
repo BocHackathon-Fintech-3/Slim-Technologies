@@ -26,12 +26,12 @@ const HeaderOneItems = [
         icon: 'arrow_right_alt',
     },
 
-    {
-        state: 'agencies',
-        name: 'AGENCIES',
-        type: 'link',
-        icon: 'perm_contact_calendar'
-    },
+    // {
+    //     state: 'agencies',
+    //     name: 'AGENCIES',
+    //     type: 'link',
+    //     icon: 'perm_contact_calendar'
+    // },
 
     {
         state: 'contact',
