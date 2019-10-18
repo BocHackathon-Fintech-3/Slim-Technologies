@@ -1,59 +1,90 @@
-<img src="assets/media/homepageslide.jpg" alt="">
-
-<!--<embryo-HomePageThreeSlider [isRTL]="embryoService.isDirectionRtl"></embryo-HomePageThreeSlider>-->
-
-
-<!--<div class="home-main-banner mb-5">-->
-    <!--<div class="container">-->
-        <!--<div fxLayout='row wrap' fxLayoutGap="0px">-->
-            <!--<div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="63" fxFlex.xl="63">-->
-                <!--<div class="home-slider">-->
-                    <!--<embryo-HomePageOneSlider [isRTL]="embryoService.isDirectionRtl"></embryo-HomePageOneSlider>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="37" fxFlex.xl="37">-->
-                <!--<div class="aside-banner">-->
-                    <!--<a [routerLink]="['/products/accessories']" class="card-shadow"> <img-->
-                            <!--src="assets/images/aside-1.jpg" alt="side" width="547" height="315"></a>-->
-                <!--</div>-->
-
-                <!--<div class="aside-banner">-->
-                    <!--<a [routerLink]="['/products/accessories']" class="card-shadow"><img src="assets/images/aside-2.jpg"-->
-                                                                                         <!--alt="side" width="547"-->
-                                                                                         <!--height="315"></a>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-
-
-<div class="feature-section">
-    <div class="container pt-5">
-        <embryo-Features></embryo-Features>
-    </div>
+<div class="container-fluid" style="position:relative;padding-left: 0 !important;padding-right: 0!important;">
+  <img src="assets/hackathon/zaapy-home.jpg" alt="">
+  <h1 style="font-family:raleway;position:absolute;top:35%;left:35%; color:white;">Zaapy </h1>
+  <h2 style="font-family:raleway;position:absolute;top:45%;left:35%; color:white;">Simple KYC and Credit Scoring</h2>
 </div>
 
+<!--<embryo-HomePageThreeSlider [isRTL]="embryoService.isDirectionRtl"></embryo-HomePageThreeSlider>-->
+<!--<div class="home-main-banner mb-5">-->
+<!--<div class="container">-->
+<!--<div fxLayout='row wrap' fxLayoutGap="0px">-->
+<!--<div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="63" fxFlex.xl="63">-->
+<!--<div class="home-slider">-->
+<!--<embryo-HomePageOneSlider [isRTL]="embryoService.isDirectionRtl"></embryo-HomePageOneSlider>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="37" fxFlex.xl="37">-->
+<!--<div class="aside-banner">-->
+<!--<a [routerLink]="['/products/accessories']" class="card-shadow"> <img-->
+<!--src="assets/images/aside-1.jpg" alt="side" width="547" height="315"></a>-->
+<!--</div>-->
+<!--<div class="aside-banner">-->
+<!--<a [routerLink]="['/products/accessories']" class="card-shadow"><img src="assets/images/aside-2.jpg"-->
+<!--alt="side" width="547"-->
+<!--height="315"></a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
-<embryo-CollectionGallery></embryo-CollectionGallery>
+<div class="feature-section">
+  <div style="margin-top:100px;" class="container pt-5">
+    <embryo-Features></embryo-Features>
+  </div>
+</div>
+<!--<embryo-CollectionGallery></embryo-CollectionGallery>-->
+<div style="margin-top:100px !important; padding:0!important;" class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <img style="height:100% !important;" src="assets/hackathon/process_2.png" alt="">
+    </div>
+    <div class="col-6">
+      <h2> Verify once, Approved by many companies!</h2>
+      <p>The UltraFICO™ Score is initially being offered through a small group of lenders as part of a limited pilot
+        phase for consumers who cannot currently access credit or, in certain cases, could be eligible for better terms.
+        This initial pilot phase is designed for fine-tuning of the deployment of the score. As we complete the pilot
+        phase, the UltraFICO™ Score will be more broadly available.</p>
+      <div class="example-button-row">
+        <button class="btn-lg" mat-raised-button color="primary">Primary</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<div style="margin-top:100px !important; padding:0!important;" class="container mt-5">
+  <div class="row">
+      <div class="col-6">
+      <h2>Assurance for your clients ? Simplest Credit Score</h2>
+      <p>The UltraFICO™ Score is initially being offered through a small group of lenders as part of a limited pilot
+        phase for consumers who cannot currently access credit or, in certain cases, could be eligible for better terms.
+        This initial pilot phase is designed for fine-tuning of the deployment of the score. As we complete the pilot
+        phase, the UltraFICO™ Score will be more broadly available.</p>
+      <div class="example-button-row">
+        <button class="btn-lg" mat-raised-button color="primary">Primary</button>
+      </div>
+    </div>
+    <div class="col-6">
+      <img style="height:100% !important;" src="assets/hackathon/process_2.png" alt="">
+    </div>
+  </div>
+</div>
 <!--<embryo-LighteningDeals *ngIf="false"-->
-                        <!--[lighteningDeals]="lighteningDealsProducts"></embryo-LighteningDeals>-->
+<!--[lighteningDeals]="lighteningDealsProducts"></embryo-LighteningDeals>-->
 
 <!--<embryo-TopProducts *ngIf="topProducts" [products]="topProducts" [currency]="embryoService?.currency"-->
-                    <!--(addToCart)="addToCart($event)"></embryo-TopProducts>-->
+<!--(addToCart)="addToCart($event)"></embryo-TopProducts>-->
 
 
 <div class="section-gap ">
-    <div class="container">
-        <div fxLayoutAlign="space-between" class="w-100">
-            <div class="block-title mb-4">
-                <h3 class="text-center">Top Agencies</h3>
-            </div>
-        </div>
-        <embryo-BrandsLogo [isRTL]="embryoService.isDirectionRtl"></embryo-BrandsLogo>
+  <div class="container">
+    <div fxLayoutAlign="space-between" class="w-100">
+      <div class="block-title mb-4">
+        <h3 class="text-center">Top Agencies</h3>
+      </div>
     </div>
+    <embryo-BrandsLogo [isRTL]="embryoService.isDirectionRtl"></embryo-BrandsLogo>
+  </div>
 </div>
 
 

@@ -23,7 +23,7 @@ export class AutocompleteTypeComponent extends FieldType implements OnInit {
     // Optional: only if you want to rely on `MatInput` implementation
     @ViewChild(MatInput) formFieldControl: MatInput;
 
-    filter: Observable<any[]>;
+    filter: Observable<any>;
 
     ngOnInit() {
         super.ngOnInit();
