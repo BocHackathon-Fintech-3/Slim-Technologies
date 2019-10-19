@@ -1,0 +1,26 @@
+<h4>Select your Bank</h4>
+
+<mat-list>
+
+  <mat-divider></mat-divider>
+
+  <ng-container *ngFor="let bank of banks">
+    <mat-list-item matRipple [ngClass]="{'selected':bank.selected}" (click)="select(bank)">
+      <img [attr.src]="bank.logo">
+
+      <h4 class="title w-100">{{bank.name}}
+        <mat-icon *ngIf="bank.selected" color="primary" class="float-right">check_box</mat-icon>
+      </h4>
+
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+  </ng-container>
+
+
+  <div class="footer text-center mt-3">
+    <button mat-flat-button class="w-50" color="primary">Continue
+    </button>
+  </div>
+
+</mat-list>

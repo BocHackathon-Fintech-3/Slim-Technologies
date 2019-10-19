@@ -1,0 +1,16 @@
+mat-list-item {
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    margin-right: 15px;
+  }
+
+  height: auto !important;
+  padding: 10px 0 !important;
+
+  &.selected{
+    background: #ededed;
+  }
+}

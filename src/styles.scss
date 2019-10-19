@@ -1,6 +1,6 @@
 @import '~ngx-bar-rating/themes/br-stars-theme.css';
-//@import '~bootstrap/scss/reboot';
-@import '~bootstrap-4-grid/scss/grid';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+//@import '~bootstrap-4-grid/scss/grid';
 @import '~css-percentage-circle/css/circle.css';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -23,4 +23,17 @@
       font-weight: 500;
     }
   }
+}
+
+h4.title {
+  mat-icon {
+    position: relative;
+    top: 3px;
+    margin-right: 4px;
+  }
+}
+
+*:focus {
+  outline: none !important;
+  border: 0 !important;
 }
