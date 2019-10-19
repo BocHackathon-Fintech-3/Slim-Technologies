@@ -19,7 +19,7 @@ import {
   MatNativeDateModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
-  MatRadioModule,
+  MatRadioModule, MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
   MatSliderModule,
@@ -54,7 +54,9 @@ import {AccountAccessComponent} from './account-access/account-access.component'
 import {FormlyModule} from '@ngx-formly/core';
 import {FormModule} from '../../Lib/forms/form.module';
 import {DirectivesModule} from '../../Lib/directives/directives.module';
-import { VerificationDocumentComponent } from './verification-documents/verification-document/verification-document.component';
+import {VerificationDocumentComponent} from './verification-documents/verification-document/verification-document.component';
+import {BankAccountComponent} from './bank-accounts/bank-account/bank-account.component';
+import {BankSelectComponent} from './bank-accounts/bank-select/bank-select.component';
 
 
 @NgModule({
@@ -91,7 +93,8 @@ import { VerificationDocumentComponent } from './verification-documents/verifica
     ReactiveFormsModule,
     MomentModule,
     FormModule,
-    DirectivesModule
+    DirectivesModule,
+    MatRippleModule
   ],
   declarations: [
     AccountComponent,
@@ -112,6 +115,11 @@ import { VerificationDocumentComponent } from './verification-documents/verifica
     CreditReportComponent,
     AccountAccessComponent,
     VerificationDocumentComponent,
+    BankAccountComponent,
+    BankSelectComponent,
+  ],
+  entryComponents: [
+    BankSelectComponent
   ]
 })
 export class UserAccountModule {

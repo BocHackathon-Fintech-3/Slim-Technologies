@@ -1,4 +1,12 @@
 <div class="row">
+
+  <div class="col-md-12 mb-2">
+    <h4 class="title">
+      <mat-icon class="mat-18" color="primary">folder_open</mat-icon>
+      Verification Documents
+    </h4>
+  </div>
+
   <div class="col-md-6" *ngFor=" let item of documents">
     <app-verification-document [document]="item"></app-verification-document>
   </div>
