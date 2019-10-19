@@ -1,0 +1,240 @@
+@import "../../../../assets/scss/material-theme";
+
+.score-item {
+  .c100.yellow .bar,
+  .c100.yellow .fill {
+    border-color: $accent !important;
+  }
+
+  .c100.yellow:hover > span {
+    color: $accent;
+  }
+
+  .c100.green .bar,
+  .c100.green .fill {
+    border-color: green !important;
+  }
+
+  .c100.green:hover > span {
+    color: $primary;
+  }
+
+
+  .c100.red .bar,
+  .c100.red .fill {
+    border-color: $warn !important;
+  }
+
+  .c100.red:hover > span {
+    color: $warn;
+  }
+
+
+  .c100 > span {
+    color: #655e5e;
+  }
+}
+
+
+.item {
+
+
+  cursor: pointer;
+
+
+  .title {
+    margin: 0;
+    background: #f6f6f6;
+    padding: 11px 15px;
+    border-bottom: 1px solid #eaeaea;
+
+    .percentage {
+      padding-left: 10px;
+      color: green;
+    }
+  }
+
+  .auto-renew {
+    color: $primary;
+    font-size: 10px;
+  }
+
+  &.red {
+    border-left: 4px solid $warn;
+
+
+    .score {
+
+      .title {
+        .percentage {
+          color: $warn;
+        }
+      }
+    }
+  }
+
+  &.yellow {
+    border-left: 4px solid $accent;
+
+
+    .score {
+
+      .title {
+        .percentage {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &.green {
+    border-left: 4px solid $primary;
+
+    .score {
+
+      .title {
+        .percentage {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  border: 1px solid #eaeaea;
+
+  //border-left: 4px solid $accent;
+  //padding: 20px 0px;
+
+  margin: 10px;
+  border-radius: 4px;
+
+
+  .score {
+
+    .title {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 3px;
+      text-transform: uppercase;
+    }
+  }
+
+
+  .company {
+    h4 {
+      margin: 0px;
+      font-size: 20px;
+    }
+
+    h6 {
+      font-size: 14px;
+      padding-left: 1px;
+    }
+
+    .logo {
+      margin-top: 5px;
+      height: 25px;
+    }
+
+  }
+
+
+  .label {
+    font-weight: 500;
+  }
+
+
+  .scoring {
+
+    /deep/ {
+
+      mat-chip {
+        font-size: 12px;
+      }
+
+      .mat-chip-list-wrapper .mat-standard-chip {
+        margin: 2px;
+      }
+
+      .mat-standard-chip {
+        min-height: 25px;
+      }
+
+    }
+  }
+
+  .details {
+
+    .score {
+
+      padding: 20px;
+
+      .score-item {
+        .type {
+          text-align: center;
+          font-weight: 500;
+          margin-top: 2px;
+          font-size: 12px;
+        }
+
+      }
+
+      .c100.small {
+        font-size: 72px;
+      }
+
+      .title {
+        .percentage {
+          color: #008023;
+          padding-top: 2px;
+          display: block;
+          font-size: 13px;
+        }
+      }
+    }
+
+
+    .key-benefits {
+
+
+      ul {
+        list-style: none;
+        padding: 0px;
+
+        li {
+          margin-top: 4px;
+
+          span {
+            font-size: 15px;
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            margin-left: 8px;
+            font-weight: 500;
+          }
+        }
+      }
+
+
+    }
+
+
+    .details-footer {
+
+      .label {
+        font-size: 20px;
+        color: $accent;
+      }
+
+      .price {
+
+
+        font-size: 3.4em;
+        color: #595959;
+      }
+    }
+  }
+
+
+}

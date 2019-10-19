@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-header>
+
+    <mat-icon color="primary" matCardAvatar>account_balance_wallet</mat-icon>
+
+    <mat-card-title>
+      <h4>Account Balance</h4>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+
+    <mat-list dense>
+      <mat-divider></mat-divider>
+
+      <ng-container *ngFor="let item of bankAccounts">
+        <mat-list-item>
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <img [attr.src]="item.bankLogo">
+            </div>
+            <div class="col-md-6">
+              <span class="label">Account</span>
+              <span class="value">{{item.number}}</span>
+            </div>
+            <div class="col-md-4">
+              <span class="label">Balance</span>
+              <span class="value">{{item.balance}}</span>
+            </div>
+          </div>
+
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
+
+      <mat-list-item class="total align-items-end" >
+        <strong>€ 7,300</strong>
+      </mat-list-item>
+
+    </mat-list>
+
+  </mat-card-content>
+
+</mat-card>

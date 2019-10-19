@@ -5,6 +5,8 @@ export class BankAccount {
   number: string;
   bankName: string;
   bankLogo: string;
+  balance?: string;
+  bankSlug?: string;
 
   constructor(data: Partial<BankAccount> = {}) {
     Object.assign(this, data);

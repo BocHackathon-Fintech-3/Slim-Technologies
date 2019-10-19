@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-header>
+    <mat-icon color="primary" matCardAvatar>money</mat-icon>
+    <mat-card-title>
+      <h4>Spending Habits</h4>
+    </mat-card-title>
+    <mat-card-subtitle>
+      Last 6 months
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <mat-list dense>
+      <mat-divider></mat-divider>
+
+      <ng-container *ngFor="let item of spendings">
+        <mat-list-item>
+
+          <div fxLayout="row wrap">
+            <div fxFlex="80">
+              <span >{{item.category}}</span>
+            </div>
+            <div fxFlex="20">
+              <span class="value">{{item.amount}}</span>
+            </div>
+          </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+
+  </mat-card-content>
+
+</mat-card>

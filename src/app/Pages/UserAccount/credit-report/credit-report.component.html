@@ -1,3 +1,140 @@
-<p>
-  credit-report works!
-</p>
+<div class="row item">
+
+  <div class="col-12 p-0">
+
+    <div class="w-100 details d-block align-center">
+
+      <h4 class="title">
+        Score :
+        <span class="percentage">720</span>
+      </h4>
+
+      <div class="score">
+        <div fxLayout="row" fxFlex="100" fxLayoutGap="20px">
+          <div class="score-item" fxFlex="calc( - 20px)">
+            <div class="c100 p80 small center">
+              <span>200</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Account Balance</div>
+          </div>
+
+          <div class="score-item" fxFlex="calc(16.6% - 20px)">
+            <div class="c100 p70 small center">
+              <span>160</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Debt</div>
+          </div>
+
+          <div class="score-item" fxFlex="calc(16.6% - 20px)">
+            <div class="c100 p95 small center green">
+              <span>190</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Miss Payments</div>
+          </div>
+
+          <div class="score-item" fxFlex="calc(16.6% - 20px)">
+            <div class="c100 p50 small center">
+              <span>70</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Spending to Earnings Radio</div>
+          </div>
+
+          <div class="score-item" fxFlex="calc(16.6% - 20px)">
+            <div class="c100 p50 small center">
+              <span>70</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Financial History</div>
+          </div>
+
+          <div class="score-item" fxFlex="calc(16.6% - 20px)">
+            <div class="c100 p80 small center">
+              <span>100</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div class="type">Spending Habits</div>
+          </div>
+        </div>
+      </div>
+
+
+      <mat-divider></mat-divider>
+
+
+      <div class="information pt-4">
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <app-account-balance-details>
+              </app-account-balance-details>
+            </div>
+
+            <div class="col-md-6">
+              <app-spendig-habits>
+              </app-spendig-habits>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="policy-details">
+
+      </div>
+
+
+      <div class="details-footer pt-4">
+
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-6 align-center">
+              <!--              <div class="label">Price</div>-->
+              <!--              <div *ngIf="offer.status==='quoted'" class="price">€{{offer.price}}</div>-->
+              <!--              <div *ngIf="offer.status==='pending'" class="price">€100 - €200</div>-->
+            </div>
+            <div class="col-6 text-right align-center">
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
