@@ -57,6 +57,8 @@ import {DirectivesModule} from '../../Lib/directives/directives.module';
 import {VerificationDocumentComponent} from './verification-documents/verification-document/verification-document.component';
 import {BankAccountComponent} from './bank-accounts/bank-account/bank-account.component';
 import {BankSelectComponent} from './bank-accounts/bank-select/bank-select.component';
+import {AccountAccessItemComponent} from './account-access/account-access-item/account-access-item.component';
+import {AccountInviteComponent} from './account-access/account-invite/account-invite.component';
 
 
 @NgModule({
@@ -117,9 +119,12 @@ import {BankSelectComponent} from './bank-accounts/bank-select/bank-select.compo
     VerificationDocumentComponent,
     BankAccountComponent,
     BankSelectComponent,
+    AccountAccessItemComponent,
+    AccountInviteComponent
   ],
   entryComponents: [
-    BankSelectComponent
+    BankSelectComponent,
+    AccountInviteComponent
   ]
 })
 export class UserAccountModule {

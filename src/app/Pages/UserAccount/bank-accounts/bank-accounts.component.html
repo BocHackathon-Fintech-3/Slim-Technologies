@@ -15,6 +15,12 @@
       </div>
       <div class="col-md-4 text-right">
 
+        <button mat-flat-button color="primary" (click)="addBankAccount()">
+          <mat-icon class="mat-18">add</mat-icon>
+          Connect Bank Account
+
+        </button>
+
       </div>
     </div>
 
@@ -22,22 +28,14 @@
   </div>
 
 
-  <div class="col-md-12">
-    <div class="alert alert-light" role="alert">
-      <h4 class="alert-heading">Info</h4>
-      <p>
-        Please connect all your bank accounts, one by one in order to be able to calculate your credit report.
+  <div class="col-md-12 mt-2">
+    <div class="alert alert-light " role="alert">
+      <p class="m-0">
+        <mat-icon color="primary">info</mat-icon>
+        <span> Please connect all your bank accounts, one by one in order to be able to calculate your credit report.</span>
       </p>
-
-      <button mat-flat-button color="primary" (click)="addBankAccount()">
-        <mat-icon class="mat-18">add</mat-icon>
-        Connect Bank Account
-
-      </button>
-
     </div>
   </div>
-
 
   <div class="col-md-6" *ngFor=" let item of bankAccounts">
     <app-bank-account [account]="item"></app-bank-account>

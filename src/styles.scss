@@ -37,3 +37,13 @@ h4.title {
   outline: none !important;
   border: 0 !important;
 }
+
+.alert {
+  border: 1px solid #ececec;
+
+  span {
+    position: relative;
+    top: -6px;
+    padding-left: 5px;
+  }
+}

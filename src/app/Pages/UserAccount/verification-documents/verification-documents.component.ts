@@ -30,6 +30,13 @@ export class VerificationDocumentsComponent implements OnInit {
       description: 'Upload a utility bill',
       status: 'approved',
       icon: 'map'
+    }),
+
+    new VerificationDocument({
+      title: 'Selfie (or Photo of you)',
+      description: 'Upload a photo of you',
+      status: 'approved',
+      icon: 'assignment_ind'
     })
 
   ];

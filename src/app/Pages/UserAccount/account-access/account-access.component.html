@@ -1,3 +1,39 @@
-<p>
-  account-access works!
-</p>
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <div class="row">
+      <div class="col-md-8">
+
+        <h4 class="title">
+          <mat-icon class="mat-18" color="primary">folder_open</mat-icon>
+          Account Access
+        </h4>
+
+      </div>
+      <div class="col-md-4 text-right">
+
+        <button mat-flat-button color="primary" (click)="invite()">
+          <mat-icon class="mat-18">group_add</mat-icon>
+          Share
+        </button>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mt-2">
+    <div class="alert alert-light " role="alert">
+      <p class="m-0">
+        <mat-icon color="primary">info</mat-icon>
+        <span>You can invite companies or individuals to access your personal details, verification documents and credit score.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6" *ngFor=" let item of access">
+    <app-account-access-item [access]="item"></app-account-access-item>
+  </div>
+</div>
