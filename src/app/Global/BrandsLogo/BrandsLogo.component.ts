@@ -16,48 +16,28 @@ export class BrandslogoComponent implements OnInit, OnChanges {
     brandsLogoArray: any = [
         {
             id: 1,
-            image: 'assets/media/companies/alianz.png'
+            image: 'assets/hackathon/Parters/Atokes.jpg'
         },
         {
             id: 2,
-            image: 'assets/media/companies/anytime.png'
+            image: 'assets/hackathon/Parters/boc.jpg'
         },
         {
             id: 3,
-            image: 'assets/media/companies/cyprilife.png'
-        },
-        {
+            image: 'assets/hackathon/Parters/Epic.jpg'
+        }, {
             id: 4,
-            image: 'assets/media/companies/eurolife.png'
+            image: 'assets/hackathon/Parters/Eurobank.jpg'
         },
         {
             id: 5,
-            image: 'assets/media/companies/gandirect.png'
+            image: 'assets/hackathon/Parters/Public.jpg'
         },
         {
             id: 6,
-            image: 'assets/media/companies/gap.png'
+            image: 'assets/hackathon/Parters/Untitled-2.jpg'
         },
-        {
-            id: 7,
-            image: 'assets/media/companies/genikes.png'
-        },
-        {
-            id: 8,
-            image: 'assets/media/companies/metlif.png'
-        },
-        {
-            id: 9,
-            image: 'assets/media/companies/royalcrown.png'
-        },
-        {
-            id: 10,
-            image: 'assets/media/companies/universal.png'
-        },
-        {
-            id: 11,
-            image: 'assets/media/companies/ydra.png'
-        },
+
 
     ];
 
@@ -72,7 +52,7 @@ export class BrandslogoComponent implements OnInit, OnChanges {
             infinite: true,
             centerMode: true,
             slidesToShow: 5,
-            slidesToScroll: 2,
+            slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
             rtl: this.isRTL,
