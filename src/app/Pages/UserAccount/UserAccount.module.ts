@@ -61,6 +61,7 @@ import {AccountAccessItemComponent} from './account-access/account-access-item/a
 import {AccountInviteComponent} from './account-access/account-invite/account-invite.component';
 import { AccountBalanceDetailsComponent } from './credit-report/account-balance-details/account-balance-details.component';
 import { SpendigHabitsComponent } from './credit-report/spendig-habits/spendig-habits.component';
+import { LoanDetailsComponent } from './credit-report/loan-details/loan-details.component';
 
 
 @NgModule({
@@ -124,7 +125,8 @@ import { SpendigHabitsComponent } from './credit-report/spendig-habits/spendig-h
     AccountAccessItemComponent,
     AccountInviteComponent,
     AccountBalanceDetailsComponent,
-    SpendigHabitsComponent
+    SpendigHabitsComponent,
+    LoanDetailsComponent
   ],
   entryComponents: [
     BankSelectComponent,
