@@ -9,6 +9,17 @@ import {ToastaService} from 'ngx-toasta';
 })
 export class PersonalDetailsComponent extends BaseFormComponent {
 
+  model = {
+    firstname: 'Thomas',
+    lastName: 'Stavrou',
+    birthday: new Date(),
+    phone: '97750323',
+    email: 'thomas@gmail.com',
+    occupation: 'Business, consulting and management',
+    city: 'Nicosia',
+    address: 'Tseriou 71, Lakatamia',
+  };
+
   constructor(private toastService: ToastaService) {
     super();
     this.setupFormFields();

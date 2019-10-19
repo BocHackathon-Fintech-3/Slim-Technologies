@@ -16,6 +16,7 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
       <formly-form
         [form]="form"
+        [model]="model"
         [options]="formOptions"
         [fields]="formFields">
         <div class="row mt-2">
