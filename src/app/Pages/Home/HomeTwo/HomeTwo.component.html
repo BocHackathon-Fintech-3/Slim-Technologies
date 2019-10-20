@@ -1,6 +1,6 @@
 <div class="container-fluid" style="position:relative;padding-left: 0 !important;padding-right: 0!important;">
   <img src="assets/hackathon/HomePage.jpg" alt="">
- </div>
+</div>
 
 <!--<embryo-HomePageThreeSlider [isRTL]="embryoService.isDirectionRtl"></embryo-HomePageThreeSlider>-->
 <!--<div class="home-main-banner mb-5">-->
@@ -39,9 +39,12 @@
     </div>
     <div class="col-6 p-5">
       <h2 class="letter-spacing"> Verify once, Multiple Benefits !</h2>
-      <p class="description">Did you need to send your detail to an organisation. Zaapy provides you this and assurance for you to proof to any company that you are a trustworthy client to get facilities that othwerwise would take too much time.</p>
+      <p class="description">Did you need to send your detail to an organisation. Zaapy provides you this and assurance
+        for you to proof to any company that you are a trustworthy client to get facilities that othwerwise would take
+        too much time.</p>
       <div class="example-button-row">
-        <button class="slim-btn-lg" mat-raised-button color="primary">GET STARTED</button>
+        <button class="slim-btn-lg" mat-raised-button color="primary" [routerLink]="['/session/signin']" >GET STARTED
+        </button>
       </div>
     </div>
   </div>
@@ -49,13 +52,14 @@
 
 <div style="margin-top:100px !important; padding:0!important;" class="container mt-5">
   <div class="row">
-      <div class="col-6 p-5">
+    <div class="col-6 p-5">
       <h2>Risk Assessment For Your Next Client</h2>
-        <p class="description">
-          Zaapy provides you credit scores to check your client and provides you Kyc and Credit score through us but from data and algorithms designed from the biggest organisations in the country.
-        </p>
+      <p class="description">
+        Zaapy provides you credit scores to check your client and provides you Kyc and Credit score through us but from
+        data and algorithms designed from the biggest organisations in the country.
+      </p>
       <div class="example-button-row">
-        <button class="slim-btn-lg" mat-raised-button color="primary">GET STARTED</button>
+        <button class="slim-btn-lg" mat-raised-button color="primary" [routerLink]="['/session/signin']">GET STARTED</button>
       </div>
     </div>
     <div class="col-6 p-5">
