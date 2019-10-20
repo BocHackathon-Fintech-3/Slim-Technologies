@@ -1,0 +1,49 @@
+<mat-card class="item">
+
+  <mat-card-content class="m-0">
+    <div fxLayout="row wrap">
+
+      <div fxFlex="32" class="text-center align-items-center">
+        <img class="logo" [attr.src]="access.logo">
+      </div>
+
+      <div fxFlex="68" class="content">
+        <h5 class="title">{{access.name}}</h5>
+
+        <h6 class="mt-2 mb-2 text-muted text-light text-italic">
+          <a href="http://{{access.url}}" target="_blank">{{access.url}}</a>
+        </h6>
+        <div class="details">
+          <div class="pt-1">
+            <mat-chip-list class="small">
+              <mat-chip color="primary" selected>Active</mat-chip>
+              <mat-chip>Since 5/3/2017</mat-chip>
+            </mat-chip-list>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </mat-card-content>
+
+
+  <button class="edit-btn" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon color="primary">more_vert</mat-icon>
+  </button>
+
+</mat-card>
+
+
+<mat-menu #menu>
+  <button mat-menu-item>
+    <mat-icon>remove_circle_outline</mat-icon>
+    <span>Disable</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>delete</mat-icon>
+    <span>Remove</span>
+  </button>
+
+</mat-menu>

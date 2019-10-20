@@ -1,0 +1,23 @@
+<h4 class="mb-4">Request Access</h4>
+
+
+<mat-form-field class="example-chip-list w-100">
+  <mat-chip-list #chipList aria-label="User Emails">
+    <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+              [removable]="removable" (removed)="remove(fruit)">
+      {{fruit.name}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="Emails"
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>
+
+
+<div class="footer text-center mt-3">
+  <button mat-flat-button class="w-50" color="primary" (click)="invite()">Invite
+  </button>
+</div>
