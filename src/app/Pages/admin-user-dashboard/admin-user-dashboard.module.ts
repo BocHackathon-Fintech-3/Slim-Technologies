@@ -35,9 +35,10 @@ import {UserAccountModule} from '../UserAccount/UserAccount.module';
 import {UserAccessComponent} from './user-access/user-access.component';
 import {UserAccessItemComponent} from './user-access/user-access-item/user-access-item.component';
 import {UserAccessRequestComponent} from './user-access/user-access-request/user-access-request.component';
+import { CreditProfileComponent } from './credit-profile/credit-profile.component';
 
 @NgModule({
-  declarations: [AdminAccountComponent, CustomerListComponent, CustomerReportComponent, UserAccessComponent, UserAccessItemComponent, UserAccessRequestComponent],
+  declarations: [AdminAccountComponent, CustomerListComponent, CustomerReportComponent, UserAccessComponent, UserAccessItemComponent, UserAccessRequestComponent, CreditProfileComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(AdminUserRoutes),
