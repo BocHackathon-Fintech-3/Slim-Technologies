@@ -1,7 +1,7 @@
 <script src="../../../app.component.spec.ts"></script>
 <mat-card class="w-100 display-block">
 
-  <mat-card-header>
+  <mat-card-header *ngIf="mode=='edit'">
 
     <mat-icon color="primary" matCardAvatar>account_circle</mat-icon>
 
@@ -19,7 +19,7 @@
         [model]="model"
         [options]="formOptions"
         [fields]="formFields">
-        <div class="row mt-2">
+        <div *ngIf="mode=='edit'" class="row mt-2">
           <div class="col-md-12">
             <button mat-raised-button color="primary" type="submit" [libSpinBtn]="saving">Save</button>
           </div>

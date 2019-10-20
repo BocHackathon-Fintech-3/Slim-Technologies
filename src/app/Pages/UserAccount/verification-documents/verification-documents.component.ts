@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {VerificationDocument} from './verification-document/verification-document.component';
 
 @Component({
@@ -7,6 +7,10 @@ import {VerificationDocument} from './verification-document/verification-documen
   styleUrls: ['./verification-documents.component.scss']
 })
 export class VerificationDocumentsComponent implements OnInit {
+
+
+  @Input()
+  mode = 'edit';
 
   documents: VerificationDocument[] = [
 

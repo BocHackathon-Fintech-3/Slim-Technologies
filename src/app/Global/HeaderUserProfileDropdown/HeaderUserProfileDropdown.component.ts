@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginService} from '../CommonSignIn/login.service';
 
 @Component({
   selector: 'embryo-HeaderUserProfileDropdown',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderUserProfileDropdownComponent implements OnInit {
 
-   constructor() { }
+  userImage: string;
 
-   ngOnInit() {
-   }
+  constructor(private loginService: LoginService) {
+
+    if (loginService.isAdmin()) {
+      this.userImage = '/assets/images/atokes.jpg';
+    } else {
+      this.userImage = 'assets/media/thomas.jpg';
+    }
+
+
+  }
+
+  ngOnInit() {
+  }
 
 }

@@ -20,6 +20,8 @@ export class VerificationDocument {
   styleUrls: ['./verification-document.component.scss']
 })
 export class VerificationDocumentComponent implements OnInit {
+  @Input()
+  mode = 'edit';
 
   @Input()
   document: VerificationDocument = new VerificationDocument();

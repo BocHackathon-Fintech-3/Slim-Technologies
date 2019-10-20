@@ -4,6 +4,7 @@
 
     <div class="w-100 details d-block align-center">
 
+
       <h4 class="title">
         Score :
         <span class="percentage">720</span>
@@ -114,22 +115,27 @@
 
       <div class="details-footer pt-4">
 
-        <div class="container-fluid">
-          <div class="row">
+        <h4 class="title">
+          Customer Details
+        </h4>
 
-            <div class="col-6 align-center">
-              <!--              <div class="label">Price</div>-->
-              <!--              <div *ngIf="offer.status==='quoted'" class="price">€{{offer.price}}</div>-->
-              <!--              <div *ngIf="offer.status==='pending'" class="price">€100 - €200</div>-->
-            </div>
-            <div class="col-6 text-right align-center">
-
-            </div>
-
-
+        <div class="row">
+          <div class="col-12 align-center">
+            <app-personal-details mode="view"></app-personal-details>
           </div>
         </div>
 
+
+        <h4 class="title">
+          Verification Documents
+        </h4>
+
+        <div class="row pl-2 pr-2 mt-3">
+          <div class="col-md-12">
+            <app-verification-documents mode="view"></app-verification-documents>
+          </div>
+
+        </div>
 
       </div>
 

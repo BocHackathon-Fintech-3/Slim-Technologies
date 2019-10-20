@@ -385,30 +385,30 @@ const FooterOneItems = [
         type: 'sub',
         icon: '',
         children: [
-            {
-                state: 'products/women',
-                name: 'WOMEN',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'products/men',
-                name: 'MEN',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'products/accesories',
-                name: 'ACCESSORIES',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            },
-            {
-                state: 'products/gadgets',
-                name: 'GADGETS',
-                type: 'link',
-                icon: 'arrow_right_alt',
-            }
+            // {
+            //     state: 'products/women',
+            //     name: 'WOMEN',
+            //     type: 'link',
+            //     icon: 'arrow_right_alt',
+            // },
+            // {
+            //     state: 'products/men',
+            //     name: 'MEN',
+            //     type: 'link',
+            //     icon: 'arrow_right_alt',
+            // },
+            // {
+            //     state: 'products/accesories',
+            //     name: 'ACCESSORIES',
+            //     type: 'link',
+            //     icon: 'arrow_right_alt',
+            // },
+            // {
+            //     state: 'products/gadgets',
+            //     name: 'GADGETS',
+            //     type: 'link',
+            //     icon: 'arrow_right_alt',
+            // }
         ]
     },
     {

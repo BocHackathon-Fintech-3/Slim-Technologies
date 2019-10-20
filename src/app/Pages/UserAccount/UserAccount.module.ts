@@ -59,9 +59,9 @@ import {BankAccountComponent} from './bank-accounts/bank-account/bank-account.co
 import {BankSelectComponent} from './bank-accounts/bank-select/bank-select.component';
 import {AccountAccessItemComponent} from './account-access/account-access-item/account-access-item.component';
 import {AccountInviteComponent} from './account-access/account-invite/account-invite.component';
-import { AccountBalanceDetailsComponent } from './credit-report/account-balance-details/account-balance-details.component';
-import { SpendigHabitsComponent } from './credit-report/spendig-habits/spendig-habits.component';
-import { LoanDetailsComponent } from './credit-report/loan-details/loan-details.component';
+import {AccountBalanceDetailsComponent} from './credit-report/account-balance-details/account-balance-details.component';
+import {SpendigHabitsComponent} from './credit-report/spendig-habits/spendig-habits.component';
+import {LoanDetailsComponent} from './credit-report/loan-details/loan-details.component';
 
 
 @NgModule({
@@ -131,6 +131,15 @@ import { LoanDetailsComponent } from './credit-report/loan-details/loan-details.
   entryComponents: [
     BankSelectComponent,
     AccountInviteComponent
+  ],
+  exports: [
+    AccountBalanceDetailsComponent,
+    LoanDetailsComponent,
+    SpendigHabitsComponent,
+    CreditReportComponent,
+    PersonalDetailsComponent,
+    VerificationDocumentsComponent
+
   ]
 })
 export class UserAccountModule {
