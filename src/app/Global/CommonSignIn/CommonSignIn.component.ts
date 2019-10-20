@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {LoginService} from './login.service';
 
 @Component({
   selector: 'embryo-SignIn',
@@ -8,20 +9,20 @@ import {Router} from '@angular/router';
 })
 export class CommonSignInComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private loginService: LoginService) {
   }
 
   ngOnInit() {
   }
 
   login(email: string) {
-    debugger
 
+    this.loginService.login(email);
 
-    if (email === 'user@mail.com') {
+    if (!this.loginService.isAdmin()) {
       this.router.navigate(['/account/credit-report']);
-    } else if (email === 'admin@mail.com') {
-
+    } else {
+      this.router.navigate(['/admin/customers']);
     }
 
   }

@@ -1,17 +1,15 @@
 <button mat-mini-fab class="log-in-user" [matMenuTriggerFor]="loginuser">
-    <img src="assets/media/thomas.jpg" width="250" height="250" alt="log-in-user">
+  <img [attr.src]="'assets/images/avatar.png'" width="250" height="250" alt="log-in-user">
 </button>
 <mat-menu #loginuser="matMenu">
+  <button mat-menu-item color="primary" fxLayoutAlign="start center" [routerLink]="['/account/credit-report']"><i
+    class="material-icons mr-1">account_circle</i> <span>My Dashboard</span>
+  </button>
 
+  <button mat-menu-item color="primary" [routerLink]="['/account/credit-report']"><i class="material-icons mr-1">local_post_office</i>
+    <span>Messages</span></button>
 
-    <button mat-menu-item color="primary" fxLayoutAlign="start center" [routerLink]="['/account/credit-report']"><i
-            class="material-icons mr-1">account_circle</i> <span>My Dashboard</span>
-    </button>
+  <button mat-menu-item color="primary" [routerLink]="['/session/signin']"><i class="material-icons mr-1">power_settings_new</i><span>Logout</span>
 
-    <button mat-menu-item color="primary" [routerLink]="['/account/credit-report']"><i class="material-icons mr-1">local_post_office</i>
-        <span>Messages</span></button>
-
-    <button mat-menu-item color="primary" [routerLink]="['/session/signin']"><i class="material-icons mr-1">power_settings_new</i><span>Logout</span>
-
-    </button>
+  </button>
 </mat-menu>

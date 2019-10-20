@@ -1,5 +1,5 @@
 <mat-card class="item">
-  <mat-card-header>
+  <mat-card-header >
     <mat-card-title>
       <mat-icon color="primary">{{document.icon}}</mat-icon>
       {{document.title}}
@@ -7,7 +7,7 @@
   </mat-card-header>
 
   <mat-card-content>
-    <p class="pl-2 pr-2">
+    <p *ngIf="mode=='edit'" class="pl-2 pr-2">
       {{document.description}}
     </p>
 
@@ -26,7 +26,7 @@
           <a href="/assets/images/id.jpg"
              download>Download</a>
 
-          <button (click)="file.click()" mat-button color="primary">Upload</button>
+          <button *ngIf="mode=='edit'" (click)="file.click()" mat-button color="primary">Upload</button>
         </div>
 
         <div *ngIf="uploadProgress" class="col-md-12 mt-3">

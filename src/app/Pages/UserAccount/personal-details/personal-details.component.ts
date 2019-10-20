@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {BaseFormComponent} from '../../../Lib/forms/base-form-component.class';
 import {ToastaService} from 'ngx-toasta';
 
@@ -7,7 +7,10 @@ import {ToastaService} from 'ngx-toasta';
   templateUrl: './personal-details.component.html',
   styleUrls: ['./personal-details.component.scss']
 })
-export class PersonalDetailsComponent extends BaseFormComponent {
+export class PersonalDetailsComponent extends BaseFormComponent implements OnInit {
+
+  @Input()
+  mode = 'edit';
 
   model = {
     firstname: 'Thomas',
@@ -22,9 +25,13 @@ export class PersonalDetailsComponent extends BaseFormComponent {
 
   constructor(private toastService: ToastaService) {
     super();
-    this.setupFormFields();
+
   }
 
+
+  ngOnInit(): void {
+    this.setupFormFields();
+  }
 
   save(): void {
     this.saving = true;
@@ -143,6 +150,10 @@ export class PersonalDetailsComponent extends BaseFormComponent {
       }
 
     ];
+
+    if (this.mode !== 'edit') {
+      this.formFields[0].fieldGroup.forEach(item => item.templateOptions.disabled = true);
+    }
   }
 
 }
